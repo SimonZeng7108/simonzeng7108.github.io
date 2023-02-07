@@ -5,7 +5,7 @@ order: 4
 ---
 
 ![Desktop View](/images/portfolio/simon_horse.jpg){: width="1368" height="920" .w-50 .right}
-I am a researcher at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
+I am a PhD researcher at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We are working on a NIHR-funded project about [*Swallowing Rehabilitation*](https://fundingawards.nihr.ac.uk/award/PB-PG-1217-20005).
 My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Deep Neural Networks.
 <br/>
