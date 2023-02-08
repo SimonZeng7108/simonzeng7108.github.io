@@ -116,7 +116,7 @@ git commit -m "Init"
 ```bash
 git push
 ```
-After successfully pushing the local repo to Github, the Github will take a few minutes to build over the cloud, you can see the process at your repo's `Actions` tab.
+After successfully pushing the local repo to Github, the Github will take a few minutes to build over the cloud, you can see the process at your repo's `Actions` tab, green means build finished.
 
 #### 6. Check your website
 Ta-da, your free website is available at `https://GITHUB-USERNAME.github.io`. For more customisation or create posts, check [**Chirpy official tutorial**](https://chirpy.cotes.page/posts/write-a-new-post/)
