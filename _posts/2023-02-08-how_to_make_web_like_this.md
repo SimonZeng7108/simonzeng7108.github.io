@@ -69,7 +69,7 @@ source ~/.bashrc
 gem install jekyll bundler
 ```
 
-If installed successfully, type following commands either in Windows or Linux shell should shall the version of the packages:
+If installed successfully, type following commands either in Windows or Linux shell should show the version of the packages:
 ```bash
 ruby -v
 gem -v
@@ -89,7 +89,7 @@ You should clone the Github repo to your local folder either by download the rep
 git clone https://github.com/GITHUB-USERNAME/GITHUB-USERNAME.github.io.git
 ```
 #### 3. Customise the _config.yml
-<mark>_config.yml</mark> is the main file contains the info about you such as the website tile, bio, your social links and etc... 
+<mark>_config.yml</mark> is the main file contains the info about you such as the website title, bio, your social links and etc... 
 
 #### 4. Build the website locally
 Open Windows or Linux shell and cd to local repo, then type
@@ -116,12 +116,18 @@ git commit -m "Init"
 ```bash
 git push
 ```
-After successfully pushing the local repo to Github, the Github will take a few minutes to build over the cloud, you can see the process at your repo's `Actions` tab.
+After successfully pushing the local repo to Github, the Github will take a few minutes to build over the cloud, you can see the process at your repo's `Actions` tab, green means build finished.
 
 #### 6. Check your website
 Ta-da, your free website is available at `https://GITHUB-USERNAME.github.io`. For more customisation or create posts, check [**Chirpy official tutorial**](https://chirpy.cotes.page/posts/write-a-new-post/)
 
 ## Common issues
+<details>
+<summary><strong>Local build fail after run `bundle exec jekyll s`</strong></summary>
+
+Make sure the 4 prerequisite packages are installed correctly by checking the software versions. My experience was Ruby version 2+ does not work very well and should be updated version 3+.
+</details>  
+
 <details>
 <summary><strong>Posts are generated locally, but not on Github domain</strong></summary>
 
