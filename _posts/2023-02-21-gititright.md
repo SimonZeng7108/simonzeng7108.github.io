@@ -7,9 +7,9 @@ tags: [Git, Github, Version Control, Terminal]
 math: true
 mermaid: true
 image:
-  path: /images/2023-02-18-git/colston.png
+  path: /images/2023-02-18-gititright/colston.png
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
-  alt: 2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its "master" branch to "main".
+  alt: 2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main.
 ---
 
 Git was developed by Linus Torvalds during the [**fathering of Linux in 2005**](https://en.wikipedia.org/wiki/Git#History). It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a product from the biggest advocate of the [**Open-source-software movement**](https://thenewstack.io/linus-torvalds-on-why-open-source-solves-the-biggest-problems/), Git is made all free and open source. It 
@@ -142,7 +142,7 @@ echo "*.log" >> .gitignore # ignore all the files with .log extension
 
 ## Branching
 Branching is one of the most useful features of git. It allows you to create a new branch based on the current working state of the repository. And you can make changes to the new branch without affecting the current branch. Once you are happy with the changes, you can choose to merge the new branch to the current branch, or graft features in different commits. <br/>
-![Desktop View](/images/2023-02-18-git/timestone.gif){: width="500" height="281"}
+![Desktop View](/images/2023-02-18-gititright/timestone.gif){: width="500" height="281"}
 _My favorite way to think about what does branching do_
 **Create a branch**
 ```bash
