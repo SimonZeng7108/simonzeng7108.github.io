@@ -6,8 +6,10 @@ order: 4
 
 ![Desktop View](/images/portfolio/simon_horse.jpg){: width="1368" height="920" .w-50 .right}
 I am a research student at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
-University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We are working on a NIHR-funded project about [*Swallowing Rehabilitation*](https://fundingawards.nihr.ac.uk/award/PB-PG-1217-20005).
+University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). 
 My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Deep Neural Networks.
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -16,8 +18,10 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ## Projects
 ---
 ![Desktop View](/images/portfolio/swin.gif){: width="128" height="128" .w-10 .left}
-**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023** <br/>
-Chengxi Zeng, Xinyu Yang, David, Smithard, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
+[**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023**](https://paperswithcode.com/paper/video-swinunet-spatio-temporal-deep-learning) <br/>
+Chengxi Zeng, Xinyu Yang, David Smithard, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
+[[*Github*](https://github.com/SimonZeng7108/Video-SwinUNet)] 
+[[*arXiv*](https://arxiv.org/abs/2302.11325v1)]<br/>
 This paper presents a deep learning framework for medical video segmentation. Convolution neural network (CNN) and transformer-based methods have achieved great milestones in medical image segmentation tasks due to their incredible semantic feature encoding and global information comprehension abilities. However, most existing approaches ignore a salient aspect of medical video data - the temporal dimension. Our proposed framework explicitly extracts features from neighbouring frames across the temporal dimension and incorporates them with a novel temporal feature blender which then tokenises the high-level Spatio-temporal feature to a strong global feature encoder Swin Transformer. The final segmentation results are produced via a UNet-like encoder-decoder architecture. Our model outperforms other approaches by a significant margin and improves the segmentation benchmarks on the VFSS2022 dataset, achieving a dice coefficient of 0.8986/0.8186 for Part1/Part2 data. Our studies have also shown the efficacy of the temporal feature blending scheme and the transferability of the framework.
 
 ---
@@ -61,7 +65,7 @@ Chengxi Zeng, Alberto Gambaruto <br/>
 We modelled Bristol city centre area and applied CFD simulation with focus on high wind speed area and presented the advantage of trees to mitigate wind using Porous Media approach.
 
 ---
-## Leadership
+<!-- ## Leadership
 ![Desktop View](/images/portfolio/bcda.jpg){: width="60" height="60" .w-10 .left}
 <h4>Founder & Executive President - 2021</h4><br/>
 
@@ -73,7 +77,7 @@ We modelled Bristol city centre area and applied CFD simulation with focus on hi
 
 ![Desktop View](/images/portfolio/cssab.png){: width="60" height="60" .w-10 .left}
 
-<h4>President - 2018</h4><br/>
+<h4>President - 2018</h4><br/> -->
 
 
 ---
