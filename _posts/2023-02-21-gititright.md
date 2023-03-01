@@ -23,8 +23,8 @@ In this post, I will introduce the basic usage of git and how to communicate wit
 To-do in this post:
 - [x] Git installation
 - [x] Git commands
-- [ ] Git configurations
-- [ ] Git with Github/Gitlab
+- [x] Git configurations
+- [x] Git with Github/Gitlab
 - [ ] Git with VScode
 - [ ] Git illustration diagram
 
@@ -178,6 +178,80 @@ Another way to combine the branches is to use ```rebase```. Rebasing allows a li
 git rebase <branch_name> # rebase the current branch to the branch
 git rebase -i <branch_name> # rebase the current branch to the branch with interactive mode
 ```
+
+## Configurations
+We don't need to configure anything to use git, but it is recommended to do so if you are collaborating with others visa online hosting services like github. <br/>
+**Configure the user name and email**
+```bash
+git config --global user.name "user name" # configure the user name
+git config --global user.email "user email@domain.com" # configure the user email
+git config --global color.ui auto # configure the coloring in command line
+git config --global --list # check the global configurations
+```
+
+Another thing we can do is to set aliases for the commands in git, just to make our life easier. <br/>
+**Set aliases for the commands**
+```bash
+git config --global alias.<alias_name> <command> # set alias for the command
+#common aliases
+git config --global alias.st status # set alias for status
+git config --global alias.ci commit # set alias for commit
+git config --global alias.br branch # set alias for branch
+git config --global alias.co checkout # set alias for checkout
+git config --global alias.unstage 'reset HEAD --' # set alias for unstage
+git config --global alias.lg "log --oneline --decorate --all --graph" # set alias for log
+```
+
+## Remote Repository
+Remote repository is a repository that is hosted online used for saving local repos or collaboration with other users. A remote repository should first be created online first. For example in github, you can go to your main page and click the ```+``` button on the top right corner and select ```New repository```. Then you can follow the instructions to create a new repository. Or you can create a online repo by forking an existing repo, which will make a copy of the existing repo to your account. <br/>
+With an repo in your hosting service, you can then clone the repo to your local machine by HTTPS or SSH. Different hosting services may have different way to config HTTPS authentication, in github, HTTPS connections does not support using account and password in terminal anymore from August 2021, you will have to setup a [**Personal Access Token**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (PAT) to authenticate. Following will show a more secure protocol by using SSH. <br/>
+**Generate SSH key**
+```bash
+ssh-keygen -t ed25519 -C user.email@domain.com # generate a new ssh key
+```
+Note that ```-t ed25519``` is the encryption algorithm, Some people also use older algorithms such as ```rsa```. ```-C``` is the comment for the email address you used in github. <br/>
+```bash
+$ Generating public/private ed25519 key pair.
+$ Enter file in which to save the key (C:\Users\simon/.ssh/id_ed25519): 
+```
+You can press enter to use the default location.<br/>
+```bash
+$ Created directory 'C:\\Users\\xxx/.ssh'.
+$ Enter passphrase (empty for no passphrase):
+```
+You can also optionally set a passphrase for the key if you are extremely cautious, otherwise press enter. <br/>
+**Add the public key on Github**
+Once generated, the terminal should tell you where the key is saved, usually it is in ```~/.ssh```. In ```~/.ssh``` folder, you should see two files, ```id_ed25519``` and ```id_ed25519.pub```. The first one is the private key, and the second one is the public key. You should never share your private key. And you can upload the public key to ```github.com/settings/keys``` by creating ```New SSH key``` with all text in ```id_ed25519.pub```.<br/>
+Now, one more step is to add the private key in local SSH agent, windows command prompt does not seem to support ```eval```, git bash can be used instead. <br/>
+**Add the private key in local SSH agent**
+```bash
+eval $(ssh-agent -s) # start the ssh agent
+ssh-add ~/.ssh/id_ed25519 # add the private key
+```
+Now you can clone the repo by SSH. <br/>
+**Clone the repo by SSH**
+```bash
+git clone SSH_URL # clone the repo by SSH
+
+$ Cloning into 'repo_name'...
+$ This key is not known by any other names.
+$ Are you sure you want to continue connecting (yes/no/[fingerprint])? #Type yes
+```
+<br/>
+Once remote repository is cloned in local machine, there are several ways to communicate with the remote repo once there are new commits in the local. <br/>
+**Exchange commits**
+```bash
+git push origin <branch_name> # push the commits to the remote repo
+git push #if cloned branch, git will default to push to origin, which is short for remote repo
+git pull # pull the commits from the remote repo
+git fetch origin <branch> # fetch  particular branch from remote repo
+git fetch # fetch all branches from remote repo
+```
+
+## Vscode Tutorial
+Since VScode is the best editor on earth, hands down. It of course integrate git functionalities. Check the detailed official tutorial series from VScode for git. <br/>
+{% include embed/youtube.html id='i_23KUAEtUM' %}
+
 
 (TBC)
 

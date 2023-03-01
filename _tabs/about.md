@@ -80,7 +80,7 @@ We modelled Bristol city centre area and applied CFD simulation with focus on hi
 <h4>President - 2018</h4><br/> -->
 
 
----
+
 
 <br>
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=n&d=hnXPU8X96e7s6ubaWzFOcgTks4PbHzmsEzYnZoEMVuE'></script>
