@@ -19,6 +19,7 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ![Desktop View](/images/portfolio/swin.gif){: width="128" height="128" .w-10 .left}
 [**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023**](https://paperswithcode.com/paper/video-swinunet-spatio-temporal-deep-learning) <br/>
+IEEE International Conference on Image Processing 2023, **Accepted** <br/>
 Chengxi Zeng, Xinyu Yang, David Smithard, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
 [[*Github*](https://github.com/SimonZeng7108/Video-SwinUNet)] 
 [[*arXiv*](https://arxiv.org/abs/2302.11325v1)]<br/>

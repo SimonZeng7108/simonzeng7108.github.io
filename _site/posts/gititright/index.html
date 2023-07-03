@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="en"
+  
+>
+
+  <!--
+  The Head
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+    
+
+    
+
+  
+
+  
+
+  
+    
+
+    
+      
+      
+
+      
+        <!-- it's a local file path -->
+
+      
+
+    
+
+  
+
+  
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Git it right" />
+<meta name="author" content="Simon" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Git was developed by Linus Torvalds during the fathering of Linux in 2005. It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a product from the biggest advocate of the Open-source-software movement, Git is made all free and open source. It is a great tool to track personal projects and tidy up the drive(no more “final_version”, “final_version2”, “final_final_version”…). Github/Gitlab are the most popular platforms for storing Git repositories. Technically git can track any type of files, small block of codes/texts to large images or videos. As long as there is change in the file directory, git can track it. However, it is not recommended to track large files with git, since all historical changes are stored in the .git folder, even if an images is deleted after commits, the git storage size will still be the same, which is not ideal to upload to Github/Gitlab or other cloud hosting services. In this post, I will introduce the basic usage of git and how to communicate with cloud hosting services like Github/Gitlab. This post can also be used as look up table or cookbook for future use." />
+<meta property="og:description" content="Git was developed by Linus Torvalds during the fathering of Linux in 2005. It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a product from the biggest advocate of the Open-source-software movement, Git is made all free and open source. It is a great tool to track personal projects and tidy up the drive(no more “final_version”, “final_version2”, “final_final_version”…). Github/Gitlab are the most popular platforms for storing Git repositories. Technically git can track any type of files, small block of codes/texts to large images or videos. As long as there is change in the file directory, git can track it. However, it is not recommended to track large files with git, since all historical changes are stored in the .git folder, even if an images is deleted after commits, the git storage size will still be the same, which is not ideal to upload to Github/Gitlab or other cloud hosting services. In this post, I will introduce the basic usage of git and how to communicate with cloud hosting services like Github/Gitlab. This post can also be used as look up table or cookbook for future use." />
+<link rel="canonical" href="http://localhost:4000/posts/gititright/" />
+<meta property="og:url" content="http://localhost:4000/posts/gititright/" />
+<meta property="og:site_name" content="Simon Zeng" />
+<meta property="og:image" content="http://localhost:4000/images/2023-02-18-gititright/colston.png" />
+<meta property="og:image:alt" content="2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-21T21:00:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/2023-02-18-gititright/colston.png" />
+<meta name="twitter:image:alt" content="2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main." />
+<meta property="twitter:title" content="Git it right" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Simon","url":"https://github.com/simonzeng7108/"},"dateModified":"2023-03-01T21:54:58+01:00","datePublished":"2023-02-21T21:00:00+01:00","description":"Git was developed by Linus Torvalds during the fathering of Linux in 2005. It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a product from the biggest advocate of the Open-source-software movement, Git is made all free and open source. It is a great tool to track personal projects and tidy up the drive(no more “final_version”, “final_version2”, “final_final_version”…). Github/Gitlab are the most popular platforms for storing Git repositories. Technically git can track any type of files, small block of codes/texts to large images or videos. As long as there is change in the file directory, git can track it. However, it is not recommended to track large files with git, since all historical changes are stored in the .git folder, even if an images is deleted after commits, the git storage size will still be the same, which is not ideal to upload to Github/Gitlab or other cloud hosting services. In this post, I will introduce the basic usage of git and how to communicate with cloud hosting services like Github/Gitlab. This post can also be used as look up table or cookbook for future use.","headline":"Git it right","image":{"lqip":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA","alt":"2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main.","url":"http://localhost:4000/images/2023-02-18-gititright/colston.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/gititright/"},"url":"http://localhost:4000/posts/gititright/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+  <title>Git it right | Simon Zeng
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Simon Zeng">
+<meta name="application-name" content="Simon Zeng">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+    
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+    
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  
+
+  <!-- GA -->
+  
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+  
+
+  
+    <!-- Manific Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css">
+  
+
+  <!-- JavaScript -->
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+  
+    <!--
+  Switch the mode between dark and light.
+-->
+
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() { return "mode"; }
+    static get MODE_ATTR() { return "data-mode"; }
+    static get DARK_MODE() { return "dark"; }
+    static get LIGHT_MODE() { return "light"; }
+    static get ID() { return "mode-toggle"; }
+
+    constructor() {
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
+
+      let self = this;
+
+      /* always follow the system prefers */
+      this.sysDarkPrefers.addEventListener("change", () => {
+        if (self.hasMode) {
+          if (self.isDarkMode) {
+            if (!self.isSysDarkPrefer) {
+              self.setDark();
+            }
+
+          } else {
+            if (self.isSysDarkPrefer) {
+              self.setLight();
+            }
+          }
+
+          self.clearMode();
+        }
+
+        self.notify();
+
+      });
+
+    } /* constructor() */
+
+    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
+
+    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
+
+    get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; }
+
+    get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; }
+
+    get hasMode() { return this.mode != null; }
+
+    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
+
+    /* get the current mode on screen */
+    get modeStatus() {
+      if (this.isDarkMode
+        || (!this.hasMode && this.isSysDarkPrefer)) {
+        return ModeToggle.DARK_MODE;
+      } else {
+        return ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    setDark() {
+      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      $('html').removeAttr(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
+
+    /* Notify another plugins that the theme mode has changed */
+    notify() {
+      window.postMessage({
+        direction: ModeToggle.ID,
+        message: this.modeStatus
+      }, "*");
+    }
+
+  } /* ModeToggle */
+
+  const toggle = new ModeToggle();
+
+  function flipMode() {
+    if (toggle.hasMode) {
+      if (toggle.isSysDarkPrefer) {
+        if (toggle.isLightMode) {
+          toggle.clearMode();
+        } else {
+          toggle.setLight();
+        }
+
+      } else {
+        if (toggle.isDarkMode) {
+          toggle.clearMode();
+        } else {
+          toggle.setDark();
+        }
+      }
+
+    } else {
+      if (toggle.isSysDarkPrefer) {
+        toggle.setLight();
+      } else {
+        toggle.setDark();
+      }
+    }
+
+    toggle.notify();
+
+  } /* flipMode() */
+
+</script>
+
+  
+</head>
+
+
+  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+
+    <!--
+  The Side Bar
+-->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper text-center">
+    <div id="avatar">
+      <a href="/" class="mx-auto">
+        
+          
+          <img src="/images/portfolio/simonzeng.JPG" alt="avatar" onerror="this.style.display='none'">
+        
+      </a>
+    </div>
+
+    <div class="site-title">
+      <a href="/">Simon Zeng</a>
+    </div>
+    <div class="site-subtitle font-italic">A slow learner</div>
+
+  </div><!-- .profile-wrapper -->
+
+  <ul class="w-100">
+
+    <!-- home -->
+    <li class="nav-item">
+      <a href="/" class="nav-link">
+        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>HOME</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    
+    <li class="nav-item">
+      <a href="/categories/" class="nav-link">
+        <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>CATEGORIES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/tags/" class="nav-link">
+        <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>TAGS</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/archives/" class="nav-link">
+        <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>ARCHIVES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/about/" class="nav-link">
+        <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>ABOUT</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+
+  </ul> <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
+
+    
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+
+      
+
+      
+      <a href="https://github.com/SimonZeng7108" aria-label="github"
+        
+
+        
+          
+          target="_blank"
+        
+
+        
+
+        rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+      
+
+    
+
+      
+
+      
+      <a href="javascript:location.href = 'mailto:' + ['cz15306','bristol.ac.uk'].join('@')" aria-label="email"
+        
+
+        
+
+        
+
+        >
+        <i class="fas fa-envelope"></i>
+      </a>
+      
+
+    
+
+      
+
+      
+      <a href="https://www.linkedin.com/in/simon-zeng" aria-label="linkedin"
+        
+
+        
+          
+          target="_blank"
+        
+
+        
+
+        rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+
+    
+
+      
+
+      
+      <a href="/feed.xml" aria-label="rss"
+        
+
+        
+
+        
+
+        >
+        <i class="fas fa-rss"></i>
+      </a>
+      
+
+    
+
+  </div> <!-- .sidebar-bottom -->
+
+</div><!-- #sidebar -->
+
+
+    <!--
+  The Top Bar
+-->
+
+<div id="topbar-wrapper">
+  <div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4">
+    <span id="breadcrumb">
+
+    
+
+    
+
+      
+
+        
+          <span>
+            <a href="/">
+              Home
+            </a>
+          </span>
+
+        
+
+      
+
+        
+
+      
+
+        
+
+          
+            <span>Git it right</span>
+          
+
+        
+
+      
+
+    
+
+    </span><!-- endof #breadcrumb -->
+
+    <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <i id="search-trigger" class="fas fa-search fa-fw"></i>
+    <span id="search-wrapper" class="align-items-center">
+      <i class="fas fa-search fa-fw"></i>
+      <input class="form-control" id="search-input" type="search"
+        aria-label="search" autocomplete="off" placeholder="Search...">
+    </span>
+    <span id="search-cancel" >Cancel</span>
+  </div>
+
+</div>
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div id="main" class="container pl-xl-4 pr-xl-4">
+        
+
+
+
+
+
+<div class="row">
+
+  <!-- core -->
+  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
+    <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+
+    
+
+    
+      
+      
+        <!--
+  Refactor the HTML structure.
+-->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+<!-- images -->
+
+
+
+
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
+
+    
+      <!-- create the image wrapper -->
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+        <!-- add SVG placehoder -->
+        
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
+
+    
+      <!-- create the image wrapper -->
+      
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+<h1 data-toc-skip>Git it right</h1>
+
+<div class="post-meta text-muted">
+    <!-- published date -->
+    <span>
+      Posted
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1677009600"
+    data-df="ll"
+    data-toggle="tooltip" data-placement="bottom">
+  Feb 21, 2023
+</em>
+
+    </span>
+
+    <!-- lastmod date -->
+    
+    <span>
+      Updated
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1677704098"
+    data-df="ll"
+    data-toggle="tooltip" data-placement="bottom">
+  Mar  1, 2023
+</em>
+
+    </span>
+    
+
+  
+    
+    
+    
+
+    
+
+    <div class="mt-3 mb-3">
+      <a href="/images/2023-02-18-gititright/colston.png" class="popup img-link preview-img"><img data-src="/images/2023-02-18-gititright/colston.png"  alt="2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main." width="1200" height="630" data-lqip="true" src="data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA" class="lazyload" data-proofer-ignore></a><figcaption class="text-center pt-2 pb-2">2020, June, 7th, Bristol, UK. The outrage from people sparked by George Floyd's death in the US has spread to the UK. A statue of Edward Colston, the former master of Society of Merchant Venturers, a slave trader, is pulled down by protesters from city centre and dragged through the streets before being thrown into the harbour. Three days later, The statue is pulled up and kept at M shed. Same year, Github announced that they would rename its master branch to main.</figcaption></div>
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- author(s) -->
+    <span>
+      
+
+      By
+
+      <em>
+      
+        
+          <a href="https://github.com/simonzeng7108/">Simon</a>
+          
+        
+      
+      </em>
+    </span>
+
+    <div>
+      <!-- page views -->
+      
+
+      <!-- read time -->
+      <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="2246 words">
+  <em>12 min</em> read</span>
+
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content">
+  <p>Git was developed by Linus Torvalds during the <a href="https://en.wikipedia.org/wiki/Git#History"><strong>fathering of Linux in 2005</strong></a>. It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a product from the biggest advocate of the <a href="https://thenewstack.io/linus-torvalds-on-why-open-source-solves-the-biggest-problems/"><strong>Open-source-software movement</strong></a>, Git is made all free and open source. It 
+is a great tool to track personal projects and tidy up the drive(no more “final_version”, “final_version2”, “final_final_version”…). <br />
+Github/Gitlab are the most popular platforms for storing Git repositories. Technically git can track any type of files, small block of codes/texts to large images or videos. As long as there is change in the file directory, git can track it. However, it is not recommended to track large files with git, since all historical changes are stored in the .git folder, even if an images is deleted after commits, the git storage size will still be the same, which is not ideal to upload to Github/Gitlab or other cloud hosting services. <br />
+In this post, I will introduce the basic usage of git and how to communicate with cloud hosting services like Github/Gitlab. This post can also be used as look up table or cookbook for future use. <br /></p>
+
+<blockquote class="prompt-info">
+  <p>“Git” in Turkish language means “go; move”</p>
+</blockquote>
+
+<p>To-do in this post:</p>
+<ul class="task-list">
+  <li class="task-list-item"><i class="fas fa-check-circle fa-fw checked"></i>Git installation</li>
+  <li class="task-list-item"><i class="fas fa-check-circle fa-fw checked"></i>Git commands</li>
+  <li class="task-list-item"><i class="fas fa-check-circle fa-fw checked"></i>Git configurations</li>
+  <li class="task-list-item"><i class="fas fa-check-circle fa-fw checked"></i>Git with Github/Gitlab</li>
+  <li class="task-list-item"><i class="far fa-circle fa-fw"></i>Git with VScode</li>
+  <li class="task-list-item"><i class="far fa-circle fa-fw"></i>Git illustration diagram</li>
+</ul>
+
+<h2 id="git-installation"><span class="mr-2">Git installation</span><a href="#git-installation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<dl>
+  <dt>Windows:</dt>
+  <dd>Install Git <a href="https://git-scm.com/download/win" target="_top">here</a>, just follow the default installation settings. <br /></dd>
+  <dt>Linux:</dt>
+  <dd>It only makes sense that git is already installed in Linux. If not, <br />
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install </span>git-all
+</pre></td></tr></tbody></table></code></div>    </div>
+  </dd>
+</dl>
+
+<p>Once installed, you can check the version of git by typing in the terminal:</p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git <span class="nt">--version</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="track-the-changes"><span class="mr-2">Track the changes</span><a href="#track-the-changes" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Go to a directory you want to track, either empty or with files/folders in it.<br />
+<strong>Initialize a git repository:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git init
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Once you have done some changes in the directory, any untracked changes will appear in <span style="color:red">red</span>. <br />
+<strong>Check any changes in the directory:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git status
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>The changes can be added to the staging area, which is a temporary area where you can review the changes before committing. It’s like a shopping cart, you can add/remove items before you check out. <br />
+<strong>Add the changes to the staging area:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git add &lt;file_name&gt; <span class="c"># add a specific file</span>
+git add <span class="nb">.</span> <span class="c"># add all files, or git add -A/-all</span>
+git add <span class="nt">-u</span> <span class="c"># update the changes to in the files that are already tracked</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>If you changed your mind and don’t want to track the changes. <br />
+<strong>Remove the file stage status from the staging area:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git restore <span class="nt">--staged</span> &lt;file_name&gt; <span class="c"># remove a specific file stage status</span>
+git <span class="nb">rm</span> <span class="nt">--cached</span> &lt;file_name&gt; <span class="c"># remove a specific file stage status, most cases the same as above</span>
+git <span class="nb">rm</span> <span class="nt">--cached</span> <span class="nt">-r</span> <span class="nb">.</span> <span class="c"># remove all files stage status</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>If you changed your mind about the modifications to some files <br />
+<strong>Remove the file changes:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git restore &lt;file_name&gt; <span class="c"># remove the file changes</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>Remove files:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">rm</span> &lt;file_name&gt; <span class="c"># remove the file it is not yet tracked</span>
+git <span class="nb">rm</span> &lt;file_name&gt; <span class="c"># remove the file and add to staging area</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Once you are happy with the changes, the changes will appear in <span style="color:green">green</span> in the staging area. You can commit the changes to the local repository. e.g. Checkout at the cashier with the items in the shopping cart<br />
+<strong>Commit the changes to the local repository:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>git commit <span class="nt">-m</span> <span class="s2">"commit message"</span> <span class="c"># commit the changes with a message</span>
+git commit <span class="nt">-am</span> <span class="s2">"commit message"</span> <span class="c"># add and commit the changes with a message</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>Check all the commit history:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git log <span class="c"># check the commit history</span>
+git log <span class="nt">--oneline</span> <span class="c"># check the commit history in one line</span>
+git log <span class="nt">--stat</span> <span class="nt">-m</span> <span class="c"># check the commit history with pathes.</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>press <code class="language-plaintext highlighter-rouge">q</code> on keyboard to exit the log.</p>
+
+<p>If you regret the commit, and want to undo the commit. You have to specify which commit you want reset back to, the current commit is named <code class="language-plaintext highlighter-rouge">HEAD</code>, its previous commit is <code class="language-plaintext highlighter-rouge">HEAD^</code> or <code class="language-plaintext highlighter-rouge">HEAD~1</code>, the second previous commit is <code class="language-plaintext highlighter-rouge">HEAD~2</code> and etc. Another way to specify commit is to use <code class="language-plaintext highlighter-rouge">&lt;commit id&gt;</code>, you can check the commit id by using <code class="language-plaintext highlighter-rouge">git log</code> and the id is in <span style="color:orange">orange</span>. You can copy any number of digits you want to call a commit id, but it has to be at least 4 digits.<br />
+<strong>Undo commit:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>git update-ref <span class="nt">-d</span> HEAD <span class="c"># Delete the initial commit after the first commit</span>
+git reset <span class="nt">--soft</span> HEAD~1 <span class="c"># Undo the last commit keep the changes in staging area</span>
+git reset <span class="nt">--hard</span> HEAD~1 <span class="c"># Undo the last commit and discard the changes</span>
+git revert &lt;commit <span class="nb">id</span><span class="o">&gt;</span> <span class="c"># Create a new commit explicitly to undo that commit</span>
+git commit <span class="nt">--amend</span> <span class="c"># Modify the last commit message</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><strong>Compare file or commit changes</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git diff <span class="c"># compare the files changes before staging</span>
+git diff <span class="nt">--staged</span> <span class="c"># compare the files changes after staging before commit, equivalent to --cached</span>
+git diff &lt;commit <span class="nb">id</span><span class="o">&gt;</span> &lt;commit <span class="nb">id</span><span class="o">&gt;</span> <span class="c"># compare the changes between two commits</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>There are also ways to temporarily save the changes without committing, which is called <code class="language-plaintext highlighter-rouge">stash</code>. <br />
+<strong>Stash the changes:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>git stash <span class="c"># stash the changes</span>
+git stash save <span class="s2">"stash message"</span> <span class="c"># stash the changes with a message</span>
+git stash list <span class="c"># check the stash list</span>
+git stash apply <span class="c"># apply the last stash</span>
+git stash drop <span class="c"># remove the last stash from the stash list</span>
+git stash pop <span class="c"># apply the last stash and remove it from the stash list</span>
+git stash clear <span class="c"># remove all the stashes from the stash list</span>
+git stash show <span class="c"># show the last stash changes</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>For some large files, you might want to ignore the changes to the file. It may cause unreasonably large git storage size. <br />
+<strong>Ignore files are not preferred to be saved:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">touch</span> .gitignore <span class="c"># create a .gitignore file</span>
+<span class="nb">echo</span> <span class="s2">"file_name"</span> <span class="o">&gt;&gt;</span> .gitignore <span class="c"># add the file name to the .gitignore file</span>
+<span class="nb">echo</span> <span class="s2">"*.log"</span> <span class="o">&gt;&gt;</span> .gitignore <span class="c"># ignore all the files with .log extension</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="branching"><span class="mr-2">Branching</span><a href="#branching" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Branching is one of the most useful features of git. It allows you to create a new branch based on the current working state of the repository. And you can make changes to the new branch without affecting the current branch. Once you are happy with the changes, you can choose to merge the new branch to the current branch, or graft features in different commits. <br />
+<a href="/images/2023-02-18-gititright/timestone.gif" class="popup img-link  shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 281'%3E%3C/svg%3E" data-src="/images/2023-02-18-gititright/timestone.gif" alt="Desktop View" width="500" height="281" class="lazyload" data-proofer-ignore></a>
+<em>My favorite way to think about what does branching do</em>
+<strong>Create a branch</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>git branch &lt;branch_name&gt; <span class="c"># create a new branch</span>
+git checkout &lt;branch_name&gt; <span class="c"># switch to the new branch</span>
+git checkout <span class="nt">-b</span> &lt;branch_name&gt; <span class="c"># create a new branch and switch to it</span>
+git branch <span class="nt">-d</span> &lt;branch_name&gt; <span class="c"># delete the branch</span>
+git branch <span class="c"># check the branch list</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>There is also a way to create a snapshot of current working state. It is sort of like a branch, but more often it is used for a milestone checkout. It’s called <code class="language-plaintext highlighter-rouge">tag</code>. <code class="language-plaintext highlighter-rouge">tag</code> branch will not be affected by any commits unless forced being renamed. <br />
+<strong>Create a tag</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>git tag &lt;tag_name&gt; <span class="c"># create a new tag</span>
+git tag <span class="nt">-a</span> &lt;tag_name&gt; <span class="nt">-m</span> <span class="s2">"tag message"</span> <span class="c"># create a new tag with a message</span>
+git tag <span class="nt">-d</span> &lt;tag_name&gt; <span class="c"># delete the tag</span>
+git tag <span class="nt">-a</span> <span class="nt">-f</span> &lt;tag_name&gt; &lt;commit <span class="nb">id</span><span class="o">&gt;</span> <span class="c"># force rename the tag to a specific commit</span>
+git checkout &lt;tag_name&gt; <span class="c"># switch to the tag</span>
+git tag <span class="c"># check the tag list</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>When you want to combine two branches together, you can use <code class="language-plaintext highlighter-rouge">merge</code>. Commits from second branch will join merging branch if there is no conflict. Bear in mind, when anything that is not added to staging area and committed, it is in the <code class="language-plaintext highlighter-rouge">head</code> state. Anything in the <code class="language-plaintext highlighter-rouge">head</code> state will be not be merged to the current branch and stay in the staging area.<br />
+<strong>Merge the branches</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git merge &lt;branch_name&gt; <span class="c"># merge the branch to the current branch</span>
+git merge <span class="nt">--no-ff</span> &lt;branch_name&gt; <span class="c"># merge the branch to the current branch as a new commit</span>
+git merge <span class="nt">--squash</span> &lt;branch_name&gt; <span class="c"># merge the branch to the current branch as a new commit with all the changes in one commit, note the changes will be in the staging area</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Another way to combine the branches is to use <code class="language-plaintext highlighter-rouge">rebase</code>. Rebasing allows a linear log history. It is useful when you want to keep the log history clean and easy to read.<br />
+<strong>Rebase the branches</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>git rebase &lt;branch_name&gt; <span class="c"># rebase the current branch to the branch</span>
+git rebase <span class="nt">-i</span> &lt;branch_name&gt; <span class="c"># rebase the current branch to the branch with interactive mode</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="configurations"><span class="mr-2">Configurations</span><a href="#configurations" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>We don’t need to configure anything to use git, but it is recommended to do so if you are collaborating with others visa online hosting services like github. <br />
+<strong>Configure the user name and email</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>git config <span class="nt">--global</span> user.name <span class="s2">"user name"</span> <span class="c"># configure the user name</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"user email@domain.com"</span> <span class="c"># configure the user email</span>
+git config <span class="nt">--global</span> color.ui auto <span class="c"># configure the coloring in command line</span>
+git config <span class="nt">--global</span> <span class="nt">--list</span> <span class="c"># check the global configurations</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Another thing we can do is to set aliases for the commands in git, just to make our life easier. <br />
+<strong>Set aliases for the commands</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>git config <span class="nt">--global</span> alias.&lt;alias_name&gt; &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="c"># set alias for the command</span>
+<span class="c">#common aliases</span>
+git config <span class="nt">--global</span> alias.st status <span class="c"># set alias for status</span>
+git config <span class="nt">--global</span> alias.ci commit <span class="c"># set alias for commit</span>
+git config <span class="nt">--global</span> alias.br branch <span class="c"># set alias for branch</span>
+git config <span class="nt">--global</span> alias.co checkout <span class="c"># set alias for checkout</span>
+git config <span class="nt">--global</span> alias.unstage <span class="s1">'reset HEAD --'</span> <span class="c"># set alias for unstage</span>
+git config <span class="nt">--global</span> alias.lg <span class="s2">"log --oneline --decorate --all --graph"</span> <span class="c"># set alias for log</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="remote-repository"><span class="mr-2">Remote Repository</span><a href="#remote-repository" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Remote repository is a repository that is hosted online used for saving local repos or collaboration with other users. A remote repository should first be created online first. For example in github, you can go to your main page and click the <code class="language-plaintext highlighter-rouge">+</code> button on the top right corner and select <code class="language-plaintext highlighter-rouge">New repository</code>. Then you can follow the instructions to create a new repository. Or you can create a online repo by forking an existing repo, which will make a copy of the existing repo to your account. <br />
+With an repo in your hosting service, you can then clone the repo to your local machine by HTTPS or SSH. Different hosting services may have different way to config HTTPS authentication, in github, HTTPS connections does not support using account and password in terminal anymore from August 2021, you will have to setup a <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"><strong>Personal Access Token</strong></a> (PAT) to authenticate. Following will show a more secure protocol by using SSH. <br />
+<strong>Generate SSH key</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> user.email@domain.com <span class="c"># generate a new ssh key</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>Note that <code class="language-plaintext highlighter-rouge">-t ed25519</code> is the encryption algorithm, Some people also use older algorithms such as <code class="language-plaintext highlighter-rouge">rsa</code>. <code class="language-plaintext highlighter-rouge">-C</code> is the comment for the email address you used in github. <br /></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>Generating public/private ed25519 key pair.
+<span class="nv">$ </span>Enter file <span class="k">in </span>which to save the key <span class="o">(</span>C:<span class="se">\U</span>sers<span class="se">\s</span>imon/.ssh/id_ed25519<span class="o">)</span>: 
+</pre></td></tr></tbody></table></code></div></div>
+<p>You can press enter to use the default location.<br /></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>Created directory <span class="s1">'C:\\Users\\xxx/.ssh'</span><span class="nb">.</span>
+<span class="nv">$ </span>Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:
+</pre></td></tr></tbody></table></code></div></div>
+<p>You can also optionally set a passphrase for the key if you are extremely cautious, otherwise press enter. <br />
+<strong>Add the public key on Github</strong>
+Once generated, the terminal should tell you where the key is saved, usually it is in <code class="language-plaintext highlighter-rouge">~/.ssh</code>. In <code class="language-plaintext highlighter-rouge">~/.ssh</code> folder, you should see two files, <code class="language-plaintext highlighter-rouge">id_ed25519</code> and <code class="language-plaintext highlighter-rouge">id_ed25519.pub</code>. The first one is the private key, and the second one is the public key. You should never share your private key. And you can upload the public key to <code class="language-plaintext highlighter-rouge">github.com/settings/keys</code> by creating <code class="language-plaintext highlighter-rouge">New SSH key</code> with all text in <code class="language-plaintext highlighter-rouge">id_ed25519.pub</code>.<br />
+Now, one more step is to add the private key in local SSH agent, windows command prompt does not seem to support <code class="language-plaintext highlighter-rouge">eval</code>, git bash can be used instead. <br />
+<strong>Add the private key in local SSH agent</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">eval</span> <span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span> <span class="c"># start the ssh agent</span>
+ssh-add ~/.ssh/id_ed25519 <span class="c"># add the private key</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>Now you can clone the repo by SSH. <br />
+<strong>Clone the repo by SSH</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>git clone SSH_URL <span class="c"># clone the repo by SSH</span>
+
+<span class="nv">$ </span>Cloning into <span class="s1">'repo_name'</span>...
+<span class="nv">$ </span>This key is not known by any other names.
+<span class="nv">$ </span>Are you sure you want to <span class="k">continue </span>connecting <span class="o">(</span><span class="nb">yes</span>/no/[fingerprint]<span class="o">)</span>? <span class="c">#Type yes</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p><br />
+Once remote repository is cloned in local machine, there are several ways to communicate with the remote repo once there are new commits in the local. <br />
+<strong>Exchange commits</strong></p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>git push origin &lt;branch_name&gt; <span class="c"># push the commits to the remote repo</span>
+git push <span class="c">#if cloned branch, git will default to push to origin, which is short for remote repo</span>
+git pull <span class="c"># pull the commits from the remote repo</span>
+git fetch origin &lt;branch&gt; <span class="c"># fetch  particular branch from remote repo</span>
+git fetch <span class="c"># fetch all branches from remote repo</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="vscode-tutorial"><span class="mr-2">Vscode Tutorial</span><a href="#vscode-tutorial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Since VScode is the best editor on earth, hands down. It of course integrate git functionalities. Check the detailed official tutorial series from VScode for git. <br /></p>
+<iframe class="embed-video youtube lazyload" src="https://www.youtube.com/embed/i_23KUAEtUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>(TBC)</p>
+
+
+</div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw mr-1"></i>
+    
+      <a href='/categories/computer-science/'>Computer Science</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw mr-1"></i>
+      
+      <a href="/tags/git/"
+          class="post-tag no-text-decoration" >Git</a>
+      
+      <a href="/tags/github/"
+          class="post-tag no-text-decoration" >Github</a>
+      
+      <a href="/tags/version-control/"
+          class="post-tag no-text-decoration" >Version Control</a>
+      
+      <a href="/tags/terminal/"
+          class="post-tag no-text-decoration" >Terminal</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+
+      
+    </div>
+
+    <!--
+ Post sharing snippet
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+        <a href="https://twitter.com/intent/tweet?text=Git%20it%20right%20-%20Simon%20Zeng&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgititright%2F" data-toggle="tooltip" data-placement="top"
+          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-fw fab fa-twitter"></i>
+        </a>
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Git%20it%20right%20-%20Simon%20Zeng&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgititright%2F" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgititright%2F&text=Git%20it%20right%20-%20Simon%20Zeng" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i id="copy-link" class="fa-fw fas fa-link small"
+        data-toggle="tooltip" data-placement="top"
+        title="Copy link"
+        data-title-succeed="Link copied successfully!">
+    </i>
+
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
+
+
+
+
+      
+    
+    
+
+    </div>
+  </div> <!-- #core-wrapper -->
+
+  <!-- panel -->
+  <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+
+    <div class="access">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">Recently Updated</div>
+    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+      
+        
+        
+        
+      <li><a href="/posts/gititright/">Git it right</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/how_to_make_web_like_this/">How to make a free website like this</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/preface/">Preface</a></li>
+      
+    </ul>
+  </div> <!-- #access-lastmod -->
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">Trending Tags</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+    
+      
+      <a class="post-tag" href="/tags/blogging/">Blogging</a>
+    
+      
+      <a class="post-tag" href="/tags/computer-graphics/">Computer Graphics</a>
+    
+      
+      <a class="post-tag" href="/tags/css/">CSS</a>
+    
+      
+      <a class="post-tag" href="/tags/demo/">Demo</a>
+    
+      
+      <a class="post-tag" href="/tags/fluid-dynamics/">Fluid Dynamics</a>
+    
+      
+      <a class="post-tag" href="/tags/git/">Git</a>
+    
+      
+      <a class="post-tag" href="/tags/github/">Github</a>
+    
+      
+      <a class="post-tag" href="/tags/html/">HTML</a>
+    
+      
+      <a class="post-tag" href="/tags/jekyll/">jekyll</a>
+    
+      
+      <a class="post-tag" href="/tags/markdown/">Markdown</a>
+    
+
+    </div>
+  </div>
+
+
+    </div>
+
+    
+      
+      
+
+
+
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading pl-3 pt-2 mb-2">Contents</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
+
+
+    
+  </div>
+
+</div>
+
+<!-- tail -->
+
+<div class="row">
+  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5">
+    
+      
+      <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+  
+    
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+          
+
+
+
+  <div id="related-posts" class="mb-2 mb-sm-4">
+    <h3 class="pt-2 mb-4 ml-1"
+      data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/smoothed_particle_hydrodynamics/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1676210400"
+    data-df="ll"
+    >
+  Feb 12, 2023
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Smoothed Particle Hydrodynamics</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                
+  “No matter how hard you squeeze your fist, there always is a gap in the atomistic scope.”
+
+
+I was so fascinated by this phenomenon when a physics teacher told us about intermolecular forces in m...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/how_to_make_web_like_this/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1675889400"
+    data-df="ll"
+    >
+  Feb  8, 2023
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>How to make a free website like this</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Jon Barron’s template has become sort of gold standard portfolio for computer vision researcher’s. Recently I decided to upgrade it to this site for more functionalities and of course a bit of fanc...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/preface/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1675627200"
+    data-df="ll"
+    >
+  Feb  5, 2023
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Preface</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Harbour side walk
+Today, half way finishing this first ever post in my blog, we went for a harbour side walk with our new friend Gabriele, a visiting PhD student from Italy. The harbour side walk s...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+    
+      
+      <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/smoothed_particle_hydrodynamics/" class="btn btn-outline-primary"
+    prompt="Older">
+    <p>Smoothed Particle Hydrodynamics</p>
+  </a>
+  
+
+  
+  <div class="btn btn-outline-primary disabled"
+    prompt="Newer">
+    <p>-</p>
+  </div>
+  
+
+</div>
+
+    
+      
+      <!--  The comments switcher -->
+
+
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <!--
+  The Search results
+-->
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
+  <div class="col-12 col-sm-11 post-content">
+    <div id="search-hints">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">Trending Tags</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+    
+      
+      <a class="post-tag" href="/tags/blogging/">Blogging</a>
+    
+      
+      <a class="post-tag" href="/tags/computer-graphics/">Computer Graphics</a>
+    
+      
+      <a class="post-tag" href="/tags/css/">CSS</a>
+    
+      
+      <a class="post-tag" href="/tags/demo/">Demo</a>
+    
+      
+      <a class="post-tag" href="/tags/fluid-dynamics/">Fluid Dynamics</a>
+    
+      
+      <a class="post-tag" href="/tags/git/">Git</a>
+    
+      
+      <a class="post-tag" href="/tags/github/">Github</a>
+    
+      
+      <a class="post-tag" href="/tags/html/">HTML</a>
+    
+      
+      <a class="post-tag" href="/tags/jekyll/">jekyll</a>
+    
+      
+      <a class="post-tag" href="/tags/markdown/">Markdown</a>
+    
+
+    </div>
+  </div>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+
+    </div> <!-- #main-wrapper -->
+
+    <!-- The Footer -->
+
+<footer>
+  <div class="container pl-lg-4 pr-lg-4">
+    <div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3">
+      <div class="footer-left">
+        <p class="mb-0">
+          © 2023
+          <a href="https://twitter.com/SimonZeng7108">Simon Zeng</a>.
+          
+          <span data-toggle="tooltip" data-placement="top"
+            title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span>
+          
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p class="mb-0">Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+      <!--
+  mermaid-js loader
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script>
+
+<script>
+  (function () {
+
+    function updateMermaid(event) {
+      if (event.source === window && event.data &&
+        event.data.direction === ModeToggle.ID) {
+
+        const mode = event.data.message;
+
+        if (typeof mermaid === "undefined") {
+          return;
+        }
+
+        let expectedTheme = (mode === ModeToggle.DARK_MODE ? "dark" : "default");
+        let config = {theme: expectedTheme};
+
+        /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
+        $(".mermaid").each(function () {
+          let svgCode = $(this).prev().children().html();
+          $(this).removeAttr("data-processed");
+          $(this).html(svgCode);
+        });
+
+        mermaid.initialize(config);
+        mermaid.init(undefined, ".mermaid");
+      }
+    }
+
+    let initTheme = "default";
+
+    if ($("html[data-mode=dark]").length > 0
+      || ($("html[data-mode]").length == 0
+        && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      initTheme = "dark";
+    }
+
+    let mermaidConf = {
+      theme: initTheme  /* <default|dark|forest|neutral> */
+    };
+
+    /* Create mermaid tag */
+    $("pre").has("code.language-mermaid").each(function () {
+      let svgCode = $(this).children().html();
+      $(this).addClass("unloaded");
+      $(this).after(`<pre class=\"mermaid\">${svgCode}</pre>`);
+    });
+
+    mermaid.initialize(mermaidConf);
+
+    window.addEventListener("message", updateMermaid);
+  })();
+
+</script>
+
+    
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    
+      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-animation="true" data-autohide="false">
+        <div class="toast-header">
+          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body text-center pt-0">
+          <p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
+          <button type="button" class="btn btn-primary" aria-label="Update">
+            Update
+          </button>
+        </div>
+      </div>
+    
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  json: '/assets/js/data/search.json',
+  searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
+  noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+  templateMiddleware: function(prop, value, template) {
+    if (prop === 'categories') {
+      if (value === '') {
+        return `${value}`;
+      } else {
+        return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+      }
+    }
+
+    if (prop === 'tags') {
+      if (value === '') {
+        return `${value}`;
+      } else {
+        return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+      }
+    }
+  }
+});
+</script>
+
+
+    <!--
+  JS selector for site.
+-->
+
+<!-- layout specified -->
+
+
+  
+
+
+
+  <!-- image lazy-loading & popup & clipboard -->
+  
+
+  
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script>
+
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+  <!-- MathJax -->
+  <script>
+  /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
+  MathJax = {
+    tex: {
+      inlineMath: [              /* start/end delimiter pairs for in-line math */
+        ['$','$'],
+        ['\\(','\\)']
+      ],
+      displayMath: [             /* start/end delimiter pairs for display math */
+        ['$$', '$$'],
+        ['\\[', '\\]']
+      ]
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+
+
+<!-- commons -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  </body>
+
+</html>
+

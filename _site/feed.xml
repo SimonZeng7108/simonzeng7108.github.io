@@ -1,0 +1,165 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Simon Zeng</title>
+  <subtitle>A page about me and my notes</subtitle>
+  <updated>2023-07-03T16:32:58+01:00</updated>
+  <author>
+    <name>Simon Zeng</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 Simon Zeng </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Git it right</title>
+    <link href="http://localhost:4000/posts/gititright/" rel="alternate" type="text/html" title="Git it right" />
+    <published>2023-02-21T21:00:00+01:00</published>
+  
+    <updated>2023-03-01T21:54:58+01:00</updated>
+  
+    <id>http://localhost:4000/posts/gititright/</id>
+    <content src="http://localhost:4000/posts/gititright/" />
+    <author>
+      <name>simon</name>
+    </author>
+
+  
+    
+    <category term="Computer Science" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Git was developed by Linus Torvalds during the fathering of Linux in 2005. It is a distributed version control system, meaning you can tracked the changes of your files and folders in a project and easily switch between different versions. it is now a standard tool for industrial project development. Collaborators can work on the same project at the same time with different versions. As a produ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Smoothed Particle Hydrodynamics</title>
+    <link href="http://localhost:4000/posts/smoothed_particle_hydrodynamics/" rel="alternate" type="text/html" title="Smoothed Particle Hydrodynamics" />
+    <published>2023-02-12T15:00:00+01:00</published>
+  
+    <updated>2023-02-12T15:00:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/smoothed_particle_hydrodynamics/</id>
+    <content src="http://localhost:4000/posts/smoothed_particle_hydrodynamics/" />
+    <author>
+      <name>simon</name>
+    </author>
+
+  
+    
+    <category term="Numerical Methods" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  “No matter how hard you squeeze your fist, there always is a gap in the atomistic scope.”
+
+
+I was so fascinated by this phenomenon when a physics teacher told us about intermolecular forces in middle school, that is, particles of matters attract each other within a certain range and push each other away when they are too close. This simple idea has helped me to conceptualise how Smoothed Par...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>How to make a free website like this</title>
+    <link href="http://localhost:4000/posts/how_to_make_web_like_this/" rel="alternate" type="text/html" title="How to make a free website like this" />
+    <published>2023-02-08T21:50:00+01:00</published>
+  
+    <updated>2023-02-09T12:56:18+01:00</updated>
+  
+    <id>http://localhost:4000/posts/how_to_make_web_like_this/</id>
+    <content src="http://localhost:4000/posts/how_to_make_web_like_this/" />
+    <author>
+      <name>simon</name>
+    </author>
+
+  
+    
+    <category term="Web Development" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Jon Barron’s template has become sort of gold standard portfolio for computer vision researcher’s. Recently I decided to upgrade it to this site for more functionalities and of course a bit of fanciness.
+Without any great knowledge about website design, I took the first step searching for some Github Page template since Github provides free host to static websites. Not only I found it’s super-d...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Preface</title>
+    <link href="http://localhost:4000/posts/preface/" rel="alternate" type="text/html" title="Preface" />
+    <published>2023-02-05T21:00:00+01:00</published>
+  
+    <updated>2023-02-06T14:47:18+01:00</updated>
+  
+    <id>http://localhost:4000/posts/preface/</id>
+    <content src="http://localhost:4000/posts/preface/" />
+    <author>
+      <name>simon</name>
+    </author>
+
+  
+    
+    <category term="MISC" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Harbour side walk
+Today, half way finishing this first ever post in my blog, we went for a harbour side walk with our new friend Gabriele, a visiting PhD student from Italy. The harbour side walk seems to become a pilgrimage for new comers to Bristol, except we don’t worship along the way. It usually starts from our office and comes back ending in a pub. The weather is beautifully rare in Febru...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
