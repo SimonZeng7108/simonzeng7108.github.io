@@ -6,8 +6,8 @@ order: 4
 
 ![Desktop View](/images/portfolio/simon_horse.jpg){: width="1368" height="920" .w-50 .right}
 I am a PhD research student at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
-University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.nbt.nhs.uk/bristol-speech-language-therapy-research-unit/bsltru-research/ctar-swift). <br/>
-My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Deep Neural Networks.
+University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005). <br/>
+My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-informed Neural Network.
 <br/>
 <br/>
 <br/>
@@ -17,13 +17,13 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ## Projects
 ---
-![Desktop View](/images/portfolio/swin.gif){: width="128" height="128" .w-10 .left}
+![Desktop View](/images/portfolio/swin.gif){: width="150" height="150" .w-10 .left}
 [**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023**](https://paperswithcode.com/paper/video-swinunet-spatio-temporal-deep-learning) <br/>
 IEEE International Conference on Image Processing 2023, **Accepted** <br/>
 Chengxi Zeng, Xinyu Yang, David Smithard, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
 [[*Github*](https://github.com/SimonZeng7108/Video-SwinUNet)] 
 [[*arXiv*](https://arxiv.org/abs/2302.11325v1)]<br/>
-This paper presents a deep learning framework for medical video segmentation. Convolution neural network (CNN) and transformer-based methods have achieved great milestones in medical image segmentation tasks due to their incredible semantic feature encoding and global information comprehension abilities. However, most existing approaches ignore a salient aspect of medical video data - the temporal dimension. Our proposed framework explicitly extracts features from neighbouring frames across the temporal dimension and incorporates them with a novel temporal feature blender which then tokenises the high-level Spatio-temporal feature to a strong global feature encoder Swin Transformer. The final segmentation results are produced via a UNet-like encoder-decoder architecture. Our model outperforms other approaches by a significant margin and improves the segmentation benchmarks on the VFSS2022 dataset, achieving a dice coefficient of 0.8986/0.8186 for Part1/Part2 data. Our studies have also shown the efficacy of the temporal feature blending scheme and the transferability of the framework.
+This paper presents a deep learning framework for medical video segmentation. Our proposed framework explicitly extracts features from neighbouring frames across the temporal dimension and incorporates them with a novel temporal feature blender which then tokenises the high-level Spatio-temporal feature to a strong global feature encoder Swin Transformer. Our model outperforms other approaches by a significant margin and improves the segmentation benchmarks on the VFSS2022 dataset, achieving a dice coefficient of 0.8986/0.8186 for Part1/Part2 data. Our studies have also shown the efficacy of the temporal feature blending scheme and the transferability of the framework.
 
 ---
 ![Desktop View](/images/portfolio/arion.gif){: width="128" height="128" .w-10 .left}
@@ -34,11 +34,10 @@ We developed a deep learning pipeline that processes long lithology tracks to mu
 ---
 ![Desktop View](/images/portfolio/swallowing.gif){: width="128" height="128" .w-10 .left}
 [**Video-TransUNet: Temporally Blended Vision Transformer for CT VFSS Instance Segmentation - 2022**](https://deepai.org/publication/video-transunet-temporally-blended-vision-transformer-for-ct-vfss-instance-segmentation) <br/>
-International Conference on Machine Vision 2022<br/>
+SPIE International Conference on Machine Vision 2022, **Accepted**, **[Best Oral Presentation](/images/portfolio/ICMV_2022.png)**<br/>
 Chengxi Zeng, Xinyu Yang, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
 [[*Github*](https://github.com/SimonZeng7108/Video-TransUNet)] 
-[[*arXiv*](https://arxiv.org/abs/2208.08315)]
-[[Best Oral Presentation](/images/portfolio/ICMV_2022.png)]<br/>
+[[*arXiv*](https://arxiv.org/abs/2208.08315)]<br/>
 We propose Video-TransUNet, a deep architecture for instance segmentation in medical CT videos constructed by integrating temporal feature blending into the TransUNet deep learning framework. In particular, our approach amalgamates strong frame representation via a ResNet CNN backbone, multi-frame feature blending via a Temporal Context Module (TCM), non-local attention via a Vision Transformer, and reconstructive capabilities for multiple targets via a UNet-based convolutional-deconvolutional architecture with multiple heads.
 
 ---
