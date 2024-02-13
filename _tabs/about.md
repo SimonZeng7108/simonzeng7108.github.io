@@ -7,7 +7,7 @@ order: 4
 ![Desktop View](/images/portfolio/simon_horse.jpg){: width="1368" height="920" .w-50 .right}
 I am a PhD research student at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005). <br/>
-My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-informed Neural Network.
+My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-Informed Neural Network.
 <br/>
 <br/>
 <br/>

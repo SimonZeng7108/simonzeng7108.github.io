@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Simon Zeng</title>
   <subtitle>A page about me and my notes</subtitle>
-  <updated>2023-07-14T16:41:29+01:00</updated>
+  <updated>2024-02-13T14:32:17+00:00</updated>
   <author>
     <name>Simon Zeng</name>
     <uri>http://localhost:4000/</uri>
@@ -13,7 +13,7 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2023 Simon Zeng </rights>
+  <rights> © 2024 Simon Zeng </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
@@ -22,9 +22,9 @@
   <entry>
     <title>Git it right</title>
     <link href="http://localhost:4000/posts/gititright/" rel="alternate" type="text/html" title="Git it right" />
-    <published>2023-02-21T21:00:00+01:00</published>
+    <published>2023-02-21T20:00:00+00:00</published>
   
-    <updated>2023-03-01T21:54:58+01:00</updated>
+    <updated>2023-03-01T20:54:58+00:00</updated>
   
     <id>http://localhost:4000/posts/gititright/</id>
     <content src="http://localhost:4000/posts/gititright/" />
@@ -56,9 +56,9 @@
   <entry>
     <title>Smoothed Particle Hydrodynamics</title>
     <link href="http://localhost:4000/posts/smoothed_particle_hydrodynamics/" rel="alternate" type="text/html" title="Smoothed Particle Hydrodynamics" />
-    <published>2023-02-12T15:00:00+01:00</published>
+    <published>2023-02-12T14:00:00+00:00</published>
   
-    <updated>2023-02-12T15:00:00+01:00</updated>
+    <updated>2023-02-12T14:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/smoothed_particle_hydrodynamics/</id>
     <content src="http://localhost:4000/posts/smoothed_particle_hydrodynamics/" />
@@ -94,9 +94,9 @@ I was so fascinated by this phenomenon when a physics teacher told us about inte
   <entry>
     <title>How to make a free website like this</title>
     <link href="http://localhost:4000/posts/how_to_make_web_like_this/" rel="alternate" type="text/html" title="How to make a free website like this" />
-    <published>2023-02-08T21:50:00+01:00</published>
+    <published>2023-02-08T20:50:00+00:00</published>
   
-    <updated>2023-02-09T12:56:18+01:00</updated>
+    <updated>2023-02-09T11:56:18+00:00</updated>
   
     <id>http://localhost:4000/posts/how_to_make_web_like_this/</id>
     <content src="http://localhost:4000/posts/how_to_make_web_like_this/" />
@@ -129,9 +129,9 @@ Without any great knowledge about website design, I took the first step searchin
   <entry>
     <title>Preface</title>
     <link href="http://localhost:4000/posts/preface/" rel="alternate" type="text/html" title="Preface" />
-    <published>2023-02-05T21:00:00+01:00</published>
+    <published>2023-02-05T20:00:00+00:00</published>
   
-    <updated>2023-02-06T14:47:18+01:00</updated>
+    <updated>2023-02-06T13:47:18+00:00</updated>
   
     <id>http://localhost:4000/posts/preface/</id>
     <content src="http://localhost:4000/posts/preface/" />
