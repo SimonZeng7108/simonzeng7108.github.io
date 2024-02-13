@@ -17,6 +17,15 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ## Projects
 ---
+![Desktop View](/images/portfolio/lorenz.gif){: width="150" height="150" .w-10 .left}
+[**Training dynamics in Physics-Informed Neural Networks with feature mapping - 2024**](https://arxiv.org/abs/2402.06955) <br/>
+Preprint, Under Review <br/>
+Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
+[[*Github*](https://github.com/SimonZeng7108/RBF-PINN)] 
+[[*arXiv*](https://arxiv.org/abs/2402.06955)]<br/>
+Physics-Informed Neural Networks (PINNs) have emerged as an iconic machine learning approach for solving Partial Differential Equations (PDEs). Although its variants have achieved significant progress, the empirical success of utilising feature mapping from the wider Implicit Neural Representations studies has been substantially neglected. We investigate the training dynamics of PINNs with a feature mapping layer via the limiting Conjugate Kernel and Neural Tangent Kernel, which sheds light on the convergence and generalisation of the model. We also show the inadequacy of commonly used Fourier-based feature mapping in some scenarios and propose the conditional positive definite Radial Basis Function as a better alternative. The empirical results reveal the efficacy of our method in diverse forward and inverse problem sets. This simple technique can be easily implemented in coordinate input networks and benefits the broad PINNs research.
+
+---
 ![Desktop View](/images/portfolio/swin.gif){: width="150" height="150" .w-10 .left}
 [**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023**](https://paperswithcode.com/paper/video-swinunet-spatio-temporal-deep-learning) <br/>
 IEEE International Conference on Image Processing 2023, **Accepted** <br/>
