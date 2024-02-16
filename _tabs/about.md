@@ -17,6 +17,15 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ## Projects
 ---
+![Desktop View](/images/portfolio/ns_fluid.gif){: width="150" height="150" .w-10 .left}
+[**RBF-PINN: Non-Fourier Positional Embedding in Physics-Informed Neural Networksg - 2024**](https://paperswithcode.com/paper/rbf-pinn-non-fourier-positional-embedding-in) <br/>
+Preprint, Under Review <br/>
+Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
+[[*Github*](https://github.com/SimonZeng7108/RBF-PINN)] 
+[[*arXiv*](https://arxiv.org/abs/2402.08367)]<br/>
+While many recent Physics-Informed Neural Networks (PINNs) variants have had considerable success in solving Partial Differential Equations, the empirical benefits of feature mapping drawn from the broader Neural Representations research have been largely overlooked. We highlight the limitations of widely used Fourier-based feature mapping in certain situations and suggest the use of the conditionally positive definite Radial Basis Function. The empirical findings demonstrate the effectiveness of our approach across a variety of forward and inverse problem cases. Our method can be seamlessly integrated into coordinate-based input neural networks and contribute to the wider field of PINNs research.
+
+---
 ![Desktop View](/images/portfolio/lorenz.gif){: width="150" height="150" .w-10 .left}
 [**Training dynamics in Physics-Informed Neural Networks with feature mapping - 2024**](https://arxiv.org/abs/2402.06955) <br/>
 Preprint, Under Review <br/>
