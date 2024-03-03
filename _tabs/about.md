@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Desktop View](/images/portfolio/simon_horse.jpg){: width="1368" height="920" .w-50 .right}
+![Desktop View](/images/portfolio/simon_conference.jpeg){: width="920" height="920" .w-50 .right}
 I am a PhD research student at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005). <br/>
 My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-Informed Neural Network.
@@ -19,7 +19,7 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ![Desktop View](/images/portfolio/ns_fluid.gif){: width="150" height="150" .w-10 .left}
 [**RBF-PINN: Non-Fourier Positional Embedding in Physics-Informed Neural Networksg - 2024**](https://paperswithcode.com/paper/rbf-pinn-non-fourier-positional-embedding-in) <br/>
-Preprint, Under Review <br/>
+International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science Workshop, **Accepted**  <br/>
 Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
 [[*Github*](https://github.com/SimonZeng7108/RBF-PINN)] 
 [[*arXiv*](https://arxiv.org/abs/2402.08367)]<br/>
