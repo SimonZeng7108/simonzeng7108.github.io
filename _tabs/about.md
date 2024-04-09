@@ -4,8 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Desktop View](/images/portfolio/simon_conference.jpeg){: width="920" height="920" .w-50 .right}
-I am a PhD research student at [*Visual Information Lab*](https://vilab.blogs.bristol.ac.uk/),
+![Desktop View](/images/portfolio/simon_conference.jpeg){: width="800" height="800" .w-50 .right}
+I am a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005). <br/>
 My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-Informed Neural Network.
 <br/>
@@ -17,16 +17,23 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ## Projects
 ---
+![Desktop View](/images/portfolio/Yorkshiretea.gif){: width="150" height="150" .w-10 .left}
+[**Tea Classification - 2024**](https://brewtone.ai/) <br/>
+Chengxi Zeng, Ted Littledale, Yorkshire Tea (Bettys & Taylors of Harrogate) <br/>
+[[*WEB APP*](https://brewtone.ai/)]<br/>
+We developed a tea classification Web App for Yorkshire Tea (Bettys & Taylors of Harrogate). The app is able to classify tea colors from any cups. My main responsibility was to develop image processing code for the tea element and extract the main tone by applying various edge detection and outlier removal techniques. Additionally, I employed the segmentation foundation model [Segment Anything](https://segment-anything.com/)  on a small tea dataset I created. The model accurately segmented the tea element and was converted to an ONNX file that can be deployed to multiple platforms. Prior to UK national tea day, the app successfully attracted thousands of users in a few weeks.
+
+---
 ![Desktop View](/images/portfolio/ns_fluid.gif){: width="150" height="150" .w-10 .left}
-[**RBF-PINN: Non-Fourier Positional Embedding in Physics-Informed Neural Networksg - 2024**](https://paperswithcode.com/paper/rbf-pinn-non-fourier-positional-embedding-in) <br/>
-International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science Workshop, **Accepted**  <br/>
+[**RBF-PINN: Non-Fourier Positional Embedding in Physics-Informed Neural Networks - 2024**](https://paperswithcode.com/paper/rbf-pinn-non-fourier-positional-embedding-in) <br/>
+International Conference on Learning Representations (**ICLR 2024**) , AI4DifferentialEquations in Science Workshop, **Accepted**  <br/>
 Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
 [[*Github*](https://github.com/SimonZeng7108/RBF-PINN)] 
 [[*arXiv*](https://arxiv.org/abs/2402.08367)]<br/>
 While many recent Physics-Informed Neural Networks (PINNs) variants have had considerable success in solving Partial Differential Equations, the empirical benefits of feature mapping drawn from the broader Neural Representations research have been largely overlooked. We highlight the limitations of widely used Fourier-based feature mapping in certain situations and suggest the use of the conditionally positive definite Radial Basis Function. The empirical findings demonstrate the effectiveness of our approach across a variety of forward and inverse problem cases. Our method can be seamlessly integrated into coordinate-based input neural networks and contribute to the wider field of PINNs research.
 
 ---
-![Desktop View](/images/portfolio/lorenz.gif){: width="150" height="150" .w-10 .left}
+![Desktop View](/images/portfolio/lorenz.gif){: width="200" height="200" .w-10 .left}
 [**Training dynamics in Physics-Informed Neural Networks with feature mapping - 2024**](https://arxiv.org/abs/2402.06955) <br/>
 Preprint, Under Review <br/>
 Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
@@ -37,7 +44,7 @@ Physics-Informed Neural Networks (PINNs) have emerged as an iconic machine learn
 ---
 ![Desktop View](/images/portfolio/swin.gif){: width="150" height="150" .w-10 .left}
 [**Video-SwinUNet: Spatio-Temporal deep learning framework for VFSS instance segmentation - 2023**](https://paperswithcode.com/paper/video-swinunet-spatio-temporal-deep-learning) <br/>
-IEEE International Conference on Image Processing 2023, **Accepted** <br/>
+IEEE International Conference on Image Processing (**ICIP 2023**), **Accepted** <br/>
 Chengxi Zeng, Xinyu Yang, David Smithard, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
 [[*Github*](https://github.com/SimonZeng7108/Video-SwinUNet)] 
 [[*arXiv*](https://arxiv.org/abs/2302.11325v1)]<br/>
@@ -47,12 +54,12 @@ This paper presents a deep learning framework for medical video segmentation. Ou
 ![Desktop View](/images/portfolio/arion.gif){: width="128" height="128" .w-10 .left}
 [**Lithology Document Analysis - 2022**](https://www.cgg.com/sites/default/files/2022-02/2202_Lun_FB_ML%20Doc%20Extraction_art.pdf) <br/>
 Chengxi Zeng, Arion.ai, CGG <br/>
-We developed a deep learning pipeline that processes long lithology tracks to multi-page images, a fast bounding box detection algorithm is employed and calibrated. Segmentation models are used to extract the curves and hence the numerical data is restored. The pipeline is tested on 1000+ documents and the results are promising.
+We developed a deep learning pipeline that processes long lithology tracks to multi-page images, a fast bounding box detection algorithm is employed and calibrated. Segmentation models are used to extract the curves and hence the numerical data is restored. The pipeline is tested on 1000+ documents and can process 100+ Page/Sec
 
 ---
 ![Desktop View](/images/portfolio/swallowing.gif){: width="128" height="128" .w-10 .left}
 [**Video-TransUNet: Temporally Blended Vision Transformer for CT VFSS Instance Segmentation - 2022**](https://deepai.org/publication/video-transunet-temporally-blended-vision-transformer-for-ct-vfss-instance-segmentation) <br/>
-SPIE International Conference on Machine Vision 2022, **Accepted**, **[Best Oral Presentation](/images/portfolio/ICMV_2022.png)**<br/>
+SPIE International Conference on Machine Vision (**ICMV 2022**), **Accepted**, **[Best Oral Presentation](/images/portfolio/ICMV_2022.png)**<br/>
 Chengxi Zeng, Xinyu Yang, Majid Mirmehdi, Alberto Gambaruto, Tilo Burghardt <br/>
 [[*Github*](https://github.com/SimonZeng7108/Video-TransUNet)] 
 [[*arXiv*](https://arxiv.org/abs/2208.08315)]<br/>
@@ -60,7 +67,7 @@ We propose Video-TransUNet, a deep architecture for instance segmentation in med
 
 ---
 ![Desktop View](/images/portfolio/drone.gif){: width="128" height="128" .w-10 .left}
-[**Portable AED Delivery Emergency Drone (Patent  under review) - 2022**](https://english.cnipa.gov.cn/) <br/>
+[**Portable AED Delivery Emergency Drone (Patented) - 2022**](https://english.cnipa.gov.cn/) <br/>
 Chengxi Zeng, Yuhang Ming, Mengxun Bai, Ruobing Li <br/>
 We are developing an Emergency drone that delivers medical kits and portable AED which would save lives in jammed cities and remote areas. This project collaborates with Hangzhou Municipal Health Commission and the drone will work with local Emergency Response Unit.
 
