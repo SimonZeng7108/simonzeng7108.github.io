@@ -15,6 +15,14 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 <br/>
 
 ---
+## News
+---
+- 17/06/2024: I began a six-month internship as an Applied Scientist at **Amazon, London**, in Prime Video & Amazon MGM Studios.
+- 18/04/2024: My 3-Minute Thesis "How AI helps doctors diagnose swallowing difficulty" was selected as a **Semi-Finalist** in the 3MT competition at the University of Bristol.
+- 03/03/2024: Our “RBF-PINN” paper was **accepted** by the International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science workshop.
+- 19/02/2024: Our research proposal "AI aided diagnosis of Dysphagia in Elderly Population" was chosen as one of the **Finalists** in the TakeAIM competition by the Smith Institute.
+
+---
 ## Projects
 ---
 ![Desktop View](/images/portfolio/Yorkshiretea.gif){: width="150" height="150" .w-10 .left}
