@@ -5,9 +5,10 @@ order: 4
 ---
 
 ![Desktop View](/images/portfolio/simon_conference.jpeg){: width="800" height="800" .w-50 .right}
-I am a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/),
+I am a Postdoc Research Associate at [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/), Bristol, supervised by [*Aaron Zhang*](https://fan-aaron-zhang.github.io/). My project is funded by Prime Video Amazon on an exciting deep video quality assessment project.
+At the same time, I am a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005). <br/>
-My part of work focuses on Medical Image Processing using Deep Learning and Computational Fluids Dynamics using Meshless method/Physics-Informed Neural Network.
+My work focuses on Medical Image Processing using Deep Learning and Computational Fluid Dynamics using Meshless method/Physics-Informed Neural Network.
 <br/>
 <br/>
 <br/>
@@ -17,13 +18,48 @@ My part of work focuses on Medical Image Processing using Deep Learning and Comp
 ---
 ## News
 ---
-- 17/06/2024: I began a six-month internship as an Applied Scientist at **Amazon, London**, in Prime Video & Amazon MGM Studios.
+- 03/02/2025: I am happy to start a new role as Postdoc Research Associate at **Bristol**, funded by Prime Video, **Amazon**.
+- 17/06/2024: I began a six-month internship as an Applied Scientist at **Amazon**, in Studio AI Lab, Prime Video & Amazon MGM Studios, London.
 - 18/04/2024: My 3-Minute Thesis "How AI helps doctors diagnose swallowing difficulty" was selected as a **Semi-Finalist** in the 3MT competition at the University of Bristol.
 - 03/03/2024: Our “RBF-PINN” paper was **accepted** by the International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science workshop.
 - 19/02/2024: Our research proposal "AI aided diagnosis of Dysphagia in Elderly Population" was chosen as one of the **Finalists** in the TakeAIM competition by the Smith Institute.
 
 ---
 ## Projects
+---
+![Desktop View](/images/portfolio/vos.gif){: width="150" height="150" .w-10 .left}
+[**Multi-Teacher Knowledge Distillation For Efficient Object Segmentation - 2025**](https://arxiv.org/abs/2501.18474) <br/>
+Simon Zeng, Gavin Cheung, Valentin Gourmet, Kurt Cutajar, Hanting Xie, Massimo Camplani, Niall Twomey, Richard Tomsett, Jas Kandola <br/>
+[*Under Review*]<br/>
+Segment Anything Model 2 (SAM2) has demonstrated state-of-
+the-art performance in image/video object segmentation across
+many domains, but its large encoder makes it challenging for
+resource-constrained devices or real-time applications. One
+solution to this problem is to carry out knowledge distillation
+from the bulky encoder to a lightweight encoder, but this can
+result in degraded performance. In this work, we investigate
+multi-teacher distillation to mitigate performance degradation
+for distilled segmentation models. Using several foundation
+teacher models, our multi-teacher distilled models achieve
+3.2 times speedup during end-to-end inference compared to
+SAM2 while achieving the best results of 74.4 and 71.1 (72.1
+and 69.6 for single-teacher distillation) mIoU on the COCO
+and LVIS image segmentation datasets, as well as showing
+competitive results on video segmentation. Our results show
+that multi-teacher distillation offers a powerful solution for
+efficient image/video segmentation, while also maintaining
+compelling performance.
+
+
+
+---
+![Desktop View](/images/portfolio/full_seg.gif){: width="150" height="150" .w-10 .left}
+[**Tuning Vision Foundation Model via Test-Time Prompt-Guided Training for VFSS Segmentations - 2025**](https://arxiv.org/abs/2501.18474) <br/>
+Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
+[[*arXiv*](https://arxiv.org/abs/2501.18474)]<br/>
+Vision foundation models have demonstrated exceptional generalization capabilities in segmentation tasks for both generic and specialized images. However, a performance gap persists between foundation models and task-specific, specialized models. Fine-tuning foundation models on downstream datasets is often necessary to bridge this gap. Unfortunately, obtaining fully annotated ground truth for downstream datasets is both challenging and costly. To address this limitation, we propose a novel test-time training paradigm that enhances the performance of foundation models on downstream datasets without requiring full annotations. Specifically, our method employs simple point prompts to guide a test-time semi-self-supervised training task. The model learns by resolving the ambiguity of the point prompt through various augmentations. This approach directly tackles challenges in the medical imaging field, where acquiring annotations is both time-intensive and expensive. We conducted extensive experiments on our new Videofluoroscopy dataset (VFSS-5k) for the instance segmentation task, achieving an average Dice coefficient of 0.868 across 12 anatomies with a single model.
+
+
 ---
 ![Desktop View](/images/portfolio/Yorkshiretea.gif){: width="150" height="150" .w-10 .left}
 [**Tea Classification - 2024**](https://brewtone.ai/) <br/>
