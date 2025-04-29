@@ -21,44 +21,33 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 - 03/02/2025: I am happy to start a new role as Postdoc Research Associate at **Bristol**, funded by Prime Video, **Amazon**.
 - 17/06/2024: I began a six-month internship as an Applied Scientist at **Amazon**, in Studio AI Lab, Prime Video & Amazon MGM Studios, London.
 - 18/04/2024: My 3-Minute Thesis "How AI helps doctors diagnose swallowing difficulty" was selected as a **Semi-Finalist** in the 3MT competition at the University of Bristol.
-- 03/03/2024: Our “RBF-PINN” paper was **accepted** by the International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science workshop.
+- 03/03/2024: Our "RBF-PINN" paper was **accepted** by the International Conference on Learning Representations (ICLR), AI4DifferentialEquations in Science workshop.
 - 19/02/2024: Our research proposal "AI aided diagnosis of Dysphagia in Elderly Population" was chosen as one of the **Finalists** in the TakeAIM competition by the Smith Institute.
 
 ---
 ## Projects
 ---
-![Desktop View](/images/portfolio/vos.gif){: width="150" height="150" .w-10 .left}
-[**Multi-Teacher Knowledge Distillation For Efficient Object Segmentation - 2025**](https://arxiv.org/abs/2501.18474) <br/>
-Simon Zeng, Gavin Cheung, Valentin Gourmet, Kurt Cutajar, Hanting Xie, Massimo Camplani, Niall Twomey, Richard Tomsett, Jas Kandola <br/>
-[*Under Review*]<br/>
-Segment Anything Model 2 (SAM2) has demonstrated state-of-
-the-art performance in image/video object segmentation across
-many domains, but its large encoder makes it challenging for
-resource-constrained devices or real-time applications. One
-solution to this problem is to carry out knowledge distillation
-from the bulky encoder to a lightweight encoder, but this can
-result in degraded performance. In this work, we investigate
-multi-teacher distillation to mitigate performance degradation
-for distilled segmentation models. Using several foundation
-teacher models, our multi-teacher distilled models achieve
-3.2 times speedup during end-to-end inference compared to
-SAM2 while achieving the best results of 74.4 and 71.1 (72.1
-and 69.6 for single-teacher distillation) mIoU on the COCO
-and LVIS image segmentation datasets, as well as showing
-competitive results on video segmentation. Our results show
-that multi-teacher distillation offers a powerful solution for
-efficient image/video segmentation, while also maintaining
-compelling performance.
+![Desktop View](/images/portfolio/C2D.gif){: width="150" height="150" .w-10 .left}
+[**C2D-ISR: Optimizing Attention-based Image Super-resolution from Continuous to Discrete Scales - 2025**](https://arxiv.org/abs/2503.13740) <br/>
+Preprint, Under Review <br/>
+Yuxuan Jiang, Chengxi Zeng, Siyue Teng, Fan Zhang, Xiaoqing Zhu, Joel Sole, David Bull <br/>
+[[*arXiv*](https://arxiv.org/abs/2503.13740)]<br/>
+In recent years, attention mechanisms have been exploited in single image super-resolution (SISR), achieving impressive reconstruction results. However, these advancements are still limited by the reliance on simple training strategies and network architectures designed for discrete up-sampling scales, which hinder the model's ability to effectively capture information across multiple scales. To address these limitations, we propose a novel framework, C2D-ISR, for optimizing attention-based image super-resolution models from both performance and complexity perspectives. Our approach is based on a two-stage training methodology and a hierarchical encoding mechanism. The new training methodology involves continuous-scale training for discrete scale models, enabling the learning of inter-scale correlations and multi-scale feature representation. In addition, we generalize the hierarchical encoding mechanism with existing attention-based network structures, which can achieve improved spatial feature fusion, cross-scale information aggregation, and more importantly, much faster inference. We have evaluated the C2D-ISR framework based on three efficient attention-based backbones, SwinIR-L, SRFormer-L and MambaIRv2-L, and demonstrated significant improvements over the other existing optimization framework, HiT, in terms of super-resolution performance (up to 0.2dB) and computational complexity reduction (up to 11%). 
 
+![Desktop View](/images/portfolio/MT_Med.svg){: width="200" height="200" .w-10 .left}
+[**Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation - 2025**](https://arxiv.org/abs/2504.02351) <br/>
+ IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**) 2025, Efficient Large Vision Models Workshop (2nd Edition), **Accepted**<br/>
+Chengxi Zeng, Yuxuan Jiang, Fan Zhang, Alberto Gambaruto, Tilo Burghardt <br/>
 
+[[*arXiv*](https://arxiv.org/abs/2504.02351)]<br/>
+The deployment of foundation models for medical imaging has demonstrated considerable success. However, their training overheads associated with downstream tasks remain substantial due to the size of the image encoders employed, and the inference complexity is also significantly high. Although lightweight variants have been obtained for these foundation models, their performance is constrained by their limited model capacity and suboptimal training strategies. In order to achieve an improved tradeoff between complexity and performance, we propose a new framework to improve the performance of low complexity models via knowledge distillation from multiple large medical foundation models (e.g., MedSAM, R50-DINO, MedCLIP). Each specializing in different vision tasks, with the goal to effectively bridge the performance gap for medical image segmentation tasks. The agglomerated model demonstrates superior generalization across 12 segmentation tasks, whereas specialized models require explicit training for each task. Our approach achieved an average performance gain of 2% in Dice coefficient compared to simple distillation.
 
----
 ![Desktop View](/images/portfolio/full_seg.gif){: width="150" height="150" .w-10 .left}
 [**Tuning Vision Foundation Model via Test-Time Prompt-Guided Training for VFSS Segmentations - 2025**](https://arxiv.org/abs/2501.18474) <br/>
+Preprint, Under Review <br/>
 Chengxi Zeng, Tilo Burghardt, Alberto Gambaruto <br/>
 [[*arXiv*](https://arxiv.org/abs/2501.18474)]<br/>
 Vision foundation models have demonstrated exceptional generalization capabilities in segmentation tasks for both generic and specialized images. However, a performance gap persists between foundation models and task-specific, specialized models. Fine-tuning foundation models on downstream datasets is often necessary to bridge this gap. Unfortunately, obtaining fully annotated ground truth for downstream datasets is both challenging and costly. To address this limitation, we propose a novel test-time training paradigm that enhances the performance of foundation models on downstream datasets without requiring full annotations. Specifically, our method employs simple point prompts to guide a test-time semi-self-supervised training task. The model learns by resolving the ambiguity of the point prompt through various augmentations. This approach directly tackles challenges in the medical imaging field, where acquiring annotations is both time-intensive and expensive. We conducted extensive experiments on our new Videofluoroscopy dataset (VFSS-5k) for the instance segmentation task, achieving an average Dice coefficient of 0.868 across 12 anatomies with a single model.
-
 
 ---
 ![Desktop View](/images/portfolio/Yorkshiretea.gif){: width="150" height="150" .w-10 .left}
@@ -132,21 +121,6 @@ We discretise standard Partial Differential Equations(PDEs) using Radial Basis F
 [**Pedestrian Level wind assessment with CFD simulation - 2019**](http://www.bristol.ac.uk/engineering/departments/mecheng/courses/projects/#6) <br/>
 Chengxi Zeng, Alberto Gambaruto <br/>
 We modelled Bristol city centre area and applied CFD simulation with focus on high wind speed area and presented the advantage of trees to mitigate wind using Porous Media approach.
-
----
-<!-- ## Leadership
-![Desktop View](/images/portfolio/bcda.jpg){: width="60" height="60" .w-10 .left}
-<h4>Founder & Executive President - 2021</h4><br/>
-
-![Desktop View](/images/portfolio/erdemy.jpg){: width="60" height="60" .w-10 .left}
-<h4> Co-Founder & Chief Business Development Manager - 2020</h4><br/>
-
-![Desktop View](/images/portfolio/cssauk.jpg){: width="60" height="60" .w-10 .left}
-<h4>Assistant Vice President - 2019</h4><br/>
-
-![Desktop View](/images/portfolio/cssab.png){: width="60" height="60" .w-10 .left}
-
-<h4>President - 2018</h4><br/> -->
 
 
 
