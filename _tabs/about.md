@@ -27,7 +27,7 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 ---
 ## Projects
 ---
-![Desktop View](/images/portfolio/C2D.gif){: width="150" height="150" .w-10 .left}
+![Desktop View](/images/portfolio/C2D_loop.gif){: width="150" height="150" .w-10 .left}
 [**C2D-ISR: Optimizing Attention-based Image Super-resolution from Continuous to Discrete Scales - 2025**](https://arxiv.org/abs/2503.13740) <br/>
 Preprint, Under Review <br/>
 Yuxuan Jiang, Chengxi Zeng, Siyue Teng, Fan Zhang, Xiaoqing Zhu, Joel Sole, David Bull <br/>
