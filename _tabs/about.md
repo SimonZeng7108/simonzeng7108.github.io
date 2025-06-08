@@ -15,32 +15,75 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 <br/>
 <br/>
 
+<style>
+.news-scroll {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 24px;
+}
+.news-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: #f0f0f0;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+.news-scroll::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+.news-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f0f0f0;
+}
+</style>
+
 ---
 ## News
 ---
+<div class="news-scroll">
+
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by [Professor Geoffrey Hinton](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/) at the University of Bristol.
-
   <div><img src="/images/portfolio/Hinton.jpg" width="300"></div>
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 20/05/2025: "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 01/04/2025: "Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation" was <b>accepted</b> by <b>CVPR</b> 2025, Efficient Large Vision Models (<b>ELVM</b>) Workshop (2nd Edition).
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 03/02/2025: I am happy to have started a new role as a Postdoctoral Research Associate at <b>Bristol</b>, funded by Prime Video, <b>Amazon</b>.
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 17/06/2024: I began a six-month internship as an Applied Scientist at <b>Amazon</b>, in the Studio AI Lab, Prime Video & Amazon MGM Studios, London.
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.
-
   <div><img src="/images/portfolio/3MT.jpg" width="300"></div>
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 03/03/2024: Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 19/02/2024: Our research proposal, "AI-aided diagnosis of Dysphagia in the Elderly Population," was chosen as one of the <b>Finalists</b> in the TakeAIM competition by the Smith Institute.
+</div>
 
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
 - 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by [Professor Sai Gu FREng](https://warwick.ac.uk/fac/sci/eng/people/sai_gu/).
-
   <div><img src="/images/portfolio/Sai_Gu.jpg" width="300"></div>
+</div>
+
+</div>
 
 ---
 ## Projects
