@@ -20,6 +20,7 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 ---
 - 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by [Professor Geoffrey Hinton](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/) at the University of Bristol.<br>
 <img src="/images/portfolio/Hinton.jpg" width="300" class="w-25 left"><br>
+<br>
 
 - 20/05/2025: "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
 
@@ -31,6 +32,7 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
   
 - 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.<br>
 <img src="/images/portfolio/3MT.jpg" width="300" class="w-25 left"><br>
+<br>
 
 - 03/03/2024: Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
   
@@ -38,6 +40,7 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 
 - 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by [Professor Sai Gu FREng](https://warwick.ac.uk/fac/sci/eng/people/sai_gu/).<br>
 <img src="/images/portfolio/Sai_Gu.jpg" width="300" class="w-25 left"><br>
+<br>
 
 
 ---
