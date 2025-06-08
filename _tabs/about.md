@@ -18,30 +18,29 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 ---
 ## News
 ---
-- 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by [Professor Geoffrey Hinton](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/) at the University of Bristol.<br>
-<img src="/images/portfolio/Hinton.jpg" width="300" class="w-25 left"><br>
-<br>
+- 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by [Professor Geoffrey Hinton](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/) at the University of Bristol.
+
+  <div><img src="/images/portfolio/Hinton.jpg" width="300"></div>
 
 - 20/05/2025: "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
 
 - 01/04/2025: "Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation" was <b>accepted</b> by <b>CVPR</b> 2025, Efficient Large Vision Models (<b>ELVM</b>) Workshop (2nd Edition).
-  
+
 - 03/02/2025: I am happy to have started a new role as a Postdoctoral Research Associate at <b>Bristol</b>, funded by Prime Video, <b>Amazon</b>.
-  
+
 - 17/06/2024: I began a six-month internship as an Applied Scientist at <b>Amazon</b>, in the Studio AI Lab, Prime Video & Amazon MGM Studios, London.
-  
-- 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.<br>
-<img src="/images/portfolio/3MT.jpg" width="300" class="w-25 left"><br>
-<br>
+
+- 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.
+
+  <div><img src="/images/portfolio/3MT.jpg" width="300"></div>
 
 - 03/03/2024: Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
-  
+
 - 19/02/2024: Our research proposal, "AI-aided diagnosis of Dysphagia in the Elderly Population," was chosen as one of the <b>Finalists</b> in the TakeAIM competition by the Smith Institute.
 
-- 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by [Professor Sai Gu FREng](https://warwick.ac.uk/fac/sci/eng/people/sai_gu/).<br>
-<img src="/images/portfolio/Sai_Gu.jpg" width="300" class="w-25 left"><br>
-<br>
+- 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by [Professor Sai Gu FREng](https://warwick.ac.uk/fac/sci/eng/people/sai_gu/).
 
+  <div><img src="/images/portfolio/Sai_Gu.jpg" width="300"></div>
 
 ---
 ## Projects
