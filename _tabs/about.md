@@ -37,6 +37,25 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
   scrollbar-width: thin;
   scrollbar-color: #c1c1c1 #f0f0f0;
 }
+.news-box {
+  border: 1px solid #e0e4ea;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fdfefe 0%, #f7fafd 100%);
+  box-shadow: 0 2px 8px 0 rgba(60, 80, 120, 0.07);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.news-box:hover {
+  box-shadow: 0 4px 16px 0 rgba(60, 80, 120, 0.13);
+  border-color: #b3c0d1;
+}
+.news-box img {
+  display: block;
+  margin: 18px auto 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px 0 rgba(60,80,120,0.08);
+}
 </style>
 
 ---
@@ -44,42 +63,42 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 ---
 <div class="news-scroll">
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
-- 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by [Professor Geoffrey Hinton](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/) at the University of Bristol.
+<div class="news-box">
+- 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by <a href="https://www.nobelprize.org/prizes/physics/2024/hinton/facts/" target="_blank">Professor Geoffrey Hinton</a> at the University of Bristol.
   <div><img src="/images/portfolio/Hinton.jpg" width="300"></div>
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 20/05/2025: "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 01/04/2025: "Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation" was <b>accepted</b> by <b>CVPR</b> 2025, Efficient Large Vision Models (<b>ELVM</b>) Workshop (2nd Edition).
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 03/02/2025: I am happy to have started a new role as a Postdoctoral Research Associate at <b>Bristol</b>, funded by Prime Video, <b>Amazon</b>.
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 17/06/2024: I began a six-month internship as an Applied Scientist at <b>Amazon</b>, in the Studio AI Lab, Prime Video & Amazon MGM Studios, London.
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.
   <div><img src="/images/portfolio/3MT.jpg" width="300"></div>
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 03/03/2024: Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
+<div class="news-box">
 - 19/02/2024: Our research proposal, "AI-aided diagnosis of Dysphagia in the Elderly Population," was chosen as one of the <b>Finalists</b> in the TakeAIM competition by the Smith Institute.
 </div>
 
-<div style="border:1px solid #ccc; border-radius:8px; padding:16px; margin-bottom:16px; background:#fafbfc;">
-- 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by [Professor Sai Gu FREng](https://warwick.ac.uk/fac/sci/eng/people/sai_gu/).
+<div class="news-box">
+- 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by <a href="https://warwick.ac.uk/fac/sci/eng/people/sai_gu/" target="_blank">Professor Sai Gu FREng</a>.
   <div><img src="/images/portfolio/Sai_Gu.jpg" width="300"></div>
 </div>
 
@@ -95,13 +114,19 @@ Yuxuan Jiang, Chengxi Zeng, Siyue Teng, Fan Zhang, Xiaoqing Zhu, Joel Sole, Davi
 [[*arXiv*](https://arxiv.org/abs/2503.13740)]<br/>
 In recent years, attention mechanisms have been exploited in single image super-resolution (SISR), achieving impressive reconstruction results. However, these advancements are still limited by the reliance on simple training strategies and network architectures designed for discrete up-sampling scales, which hinder the model's ability to effectively capture information across multiple scales. To address these limitations, we propose a novel framework, C2D-ISR, for optimizing attention-based image super-resolution models from both performance and complexity perspectives. Our approach is based on a two-stage training methodology and a hierarchical encoding mechanism. The new training methodology involves continuous-scale training for discrete scale models, enabling the learning of inter-scale correlations and multi-scale feature representation. In addition, we generalize the hierarchical encoding mechanism with existing attention-based network structures, which can achieve improved spatial feature fusion, cross-scale information aggregation, and more importantly, much faster inference. We have evaluated the C2D-ISR framework based on three efficient attention-based backbones, SwinIR-L, SRFormer-L and MambaIRv2-L, and demonstrated significant improvements over the other existing optimization framework, HiT, in terms of super-resolution performance (up to 0.2dB) and computational complexity reduction (up to 11%). 
 
+---
+
+
 ![Desktop View](/images/portfolio/MT_Med.svg){: width="200" height="200" .w-10 .left}
 [**Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation - 2025**](https://arxiv.org/abs/2504.02351) <br/>
  IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**) 2025, Efficient Large Vision Models Workshop (2nd Edition), **Accepted**<br/>
 Chengxi Zeng, Yuxuan Jiang, Fan Zhang, Alberto Gambaruto, Tilo Burghardt <br/>
 
+
 [[*arXiv*](https://arxiv.org/abs/2504.02351)]<br/>
 The deployment of foundation models for medical imaging has demonstrated considerable success. However, their training overheads associated with downstream tasks remain substantial due to the size of the image encoders employed, and the inference complexity is also significantly high. Although lightweight variants have been obtained for these foundation models, their performance is constrained by their limited model capacity and suboptimal training strategies. In order to achieve an improved tradeoff between complexity and performance, we propose a new framework to improve the performance of low complexity models via knowledge distillation from multiple large medical foundation models (e.g., MedSAM, R50-DINO, MedCLIP). Each specializing in different vision tasks, with the goal to effectively bridge the performance gap for medical image segmentation tasks. The agglomerated model demonstrates superior generalization across 12 segmentation tasks, whereas specialized models require explicit training for each task. Our approach achieved an average performance gain of 2% in Dice coefficient compared to simple distillation.
+
+---
 
 ![Desktop View](/images/portfolio/full_seg.gif){: width="150" height="150" .w-10 .left}
 [**Tuning Vision Foundation Model via Test-Time Prompt-Guided Training for VFSS Segmentations - 2025**](https://arxiv.org/abs/2501.18474) <br/>
