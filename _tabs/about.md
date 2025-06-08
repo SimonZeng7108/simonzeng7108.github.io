@@ -64,41 +64,44 @@ University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https:/
 <div class="news-scroll">
 
 <div class="news-box">
-- 02/06/2025: I co-organised a Richard Gregory Memorial Lecture given by <a href="https://www.nobelprize.org/prizes/physics/2024/hinton/facts/" target="_blank">Professor Geoffrey Hinton</a> at the University of Bristol.
+  <span style="font-weight:600;">02/06/2025:</span> I co-organised a Richard Gregory Memorial Lecture given by
+  <a href="https://www.nobelprize.org/prizes/physics/2024/hinton/facts/" target="_blank">Professor Geoffrey Hinton</a>
+  at the University of Bristol.
   <div><img src="/images/portfolio/Hinton.jpg" width="300"></div>
 </div>
 
 <div class="news-box">
-- 20/05/2025: "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
+  <span style="font-weight:600;">20/05/2025:</span> "Multi-Teacher Knowledge Distillation for Efficient Object Segmentation" was <b>accepted</b> by the IEEE International Conference on Image Processing (<b>ICIP</b>) 2025.
 </div>
 
 <div class="news-box">
-- 01/04/2025: "Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation" was <b>accepted</b> by <b>CVPR</b> 2025, Efficient Large Vision Models (<b>ELVM</b>) Workshop (2nd Edition).
+  <span style="font-weight:600;">01/04/2025:</span> "Agglomerating Large Vision Encoders via Distillation for VFSS Segmentation" was <b>accepted</b> by <b>CVPR</b> 2025, Efficient Large Vision Models (<b>ELVM</b>) Workshop (2nd Edition).
 </div>
 
 <div class="news-box">
-- 03/02/2025: I am happy to have started a new role as a Postdoctoral Research Associate at <b>Bristol</b>, funded by Prime Video, <b>Amazon</b>.
+  <span style="font-weight:600;">03/02/2025:</span> I am happy to have started a new role as a Postdoctoral Research Associate at <b>Bristol</b>, funded by Prime Video, <b>Amazon</b>.
 </div>
 
 <div class="news-box">
-- 17/06/2024: I began a six-month internship as an Applied Scientist at <b>Amazon</b>, in the Studio AI Lab, Prime Video & Amazon MGM Studios, London.
+  <span style="font-weight:600;">17/06/2024:</span> I began a six-month internship as an Applied Scientist at <b>Amazon</b>, in the Studio AI Lab, Prime Video & Amazon MGM Studios, London.
 </div>
 
 <div class="news-box">
-- 18/04/2024: My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.
+  <span style="font-weight:600;">18/04/2024:</span> My 3-Minute Thesis, "How AI helps doctors diagnose swallowing difficulty," was selected as a <b>Semi-Finalist</b> in the 3MT competition at the University of Bristol.
   <div><img src="/images/portfolio/3MT.jpg" width="300"></div>
 </div>
 
 <div class="news-box">
-- 03/03/2024: Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
+  <span style="font-weight:600;">03/03/2024:</span> Our "RBF-PINN" paper was <b>accepted</b> by the International Conference on Learning Representations (<b>ICLR</b>), AI4DifferentialEquations (<b>AI4DE</b>) in Science workshop.
 </div>
 
 <div class="news-box">
-- 19/02/2024: Our research proposal, "AI-aided diagnosis of Dysphagia in the Elderly Population," was chosen as one of the <b>Finalists</b> in the TakeAIM competition by the Smith Institute.
+  <span style="font-weight:600;">19/02/2024:</span> Our research proposal, "AI-aided diagnosis of Dysphagia in the Elderly Population," was chosen as one of the <b>Finalists</b> in the TakeAIM competition by the Smith Institute.
 </div>
 
 <div class="news-box">
-- 27/11/2023: I co-organised an event for the Outstanding Young Scholars Society UK, led by <a href="https://warwick.ac.uk/fac/sci/eng/people/sai_gu/" target="_blank">Professor Sai Gu FREng</a>.
+  <span style="font-weight:600;">27/11/2023:</span> I co-organised an event for the Outstanding Young Scholars Society UK, led by
+  <a href="https://warwick.ac.uk/fac/sci/eng/people/sai_gu/" target="_blank">Professor Sai Gu FREng</a>.
   <div><img src="/images/portfolio/Sai_Gu.jpg" width="300"></div>
 </div>
 
