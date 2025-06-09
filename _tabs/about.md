@@ -6,6 +6,7 @@ order: 4
 
 ![Desktop View](/images/portfolio/simon_conference.jpeg){: width="800" height="800" .w-50 .right}
 I am a Postdoc Research Associate at [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/), Bristol, supervised by [*Dr Aaron Zhang*](https://fan-aaron-zhang.github.io/) and [*Prof. David Bull*](https://www.bristol.ac.uk/people/person/David-Bull-f53987d8-4d62-431b-8228-2d39f944fbfe/). My project is funded by Prime Video Amazon on an exciting deep video quality assessment project.
+At the same time, I served as an Academic Advisor for Tianjin University Hospital on a project to develop a multi-modal medical image analysis framework for spinal cord injury detection and rehabilitation.
 Prior than this, I am a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/),
 University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005) funded by NIHR. <br/>
 <!-- My work focuses on Medical Image Processing using Deep Learning and Computational Fluid Dynamics using Meshless method/Physics-Informed Neural Network. -->
@@ -128,6 +129,15 @@ Chengxi Zeng, Yuxuan Jiang, Fan Zhang, Alberto Gambaruto, Tilo Burghardt <br/>
 
 [[*arXiv*](https://arxiv.org/abs/2504.02351)]<br/>
 The deployment of foundation models for medical imaging has demonstrated considerable success. However, their training overheads associated with downstream tasks remain substantial due to the size of the image encoders employed, and the inference complexity is also significantly high. Although lightweight variants have been obtained for these foundation models, their performance is constrained by their limited model capacity and suboptimal training strategies. In order to achieve an improved tradeoff between complexity and performance, we propose a new framework to improve the performance of low complexity models via knowledge distillation from multiple large medical foundation models (e.g., MedSAM, R50-DINO, MedCLIP). Each specializing in different vision tasks, with the goal to effectively bridge the performance gap for medical image segmentation tasks. The agglomerated model demonstrates superior generalization across 12 segmentation tasks, whereas specialized models require explicit training for each task. Our approach achieved an average performance gain of 2% in Dice coefficient compared to simple distillation.
+
+---
+![Desktop View](/images/portfolio/spine.gif){: width="150" height="150" .w-10 .left}
+**Spinal Cord Injury Detection and Rehabilitation Via Multi-Modal Medical Image Analysis - 2025** <br/>
+
+Ye Tian, Zekai Yang, Chengxi Zeng, Jian Ma <br/>
+
+
+We are developing a multi-modal medical image analysis framework for spinal cord injury detection and are constructing a large-scale dataset of 3D spinal cord segmentations and multi-stage clinical diagnoses from trained doctors. We employ state-of-the-art foundation models to extract features from different modalities and then use a multi-task learning framework to predict injury severity and clinical diagnosis.
 
 ---
 
