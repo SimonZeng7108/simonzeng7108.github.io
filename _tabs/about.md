@@ -4,11 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Desktop View](/images/portfolio/simon_conference.jpeg){: width="800" height="800" .w-50 .right}
-I am a Postdoc Research Associate at [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/), Bristol, supervised by [*Dr Aaron Zhang*](https://fan-aaron-zhang.github.io/) and [*Prof. David Bull*](https://www.bristol.ac.uk/people/person/David-Bull-f53987d8-4d62-431b-8228-2d39f944fbfe/). My project is funded by Prime Video Amazon on an exciting deep video quality assessment project. <br/>
-At the same time, I served as an Academic Advisor for Tianjin University Hospital on a project to develop a multi-modal medical image analysis framework for spinal cord injury detection and rehabilitation. <br/>
-Prior than this, I am a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/),
-University of Bristol, where I am supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We work on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005) funded by NIHR. <br/>
+![Desktop View](/images/portfolio/simon_conference.jpeg){: width="400" height="400" .w-50 .float-right}
+
+I am a Postdoctoral Research Associate at the [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/) in Bristol, supervised by [*Dr Aaron Zhang*](https://fan-aaron-zhang.github.io/) and [*Prof. David Bull*](https://www.bristol.ac.uk/people/person/David-Bull-f53987d8-4d62-431b-8228-2d39f944fbfe/). My current project, funded by Prime Video Amazon, focuses on deep video quality assessment.
+
+I also serve as an Academic Advisor for Tianjin University Hospital, contributing to the development of a multi-modal medical image analysis framework for spinal cord injury detection and rehabilitation.
+
+Prior to this, I was a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/), University of Bristol, where I was supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Dr Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We worked on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005) funded by NIHR.
 <!-- My work focuses on Medical Image Processing using Deep Learning and Computational Fluid Dynamics using Meshless method/Physics-Informed Neural Network. -->
 <br/>
 <br/>
