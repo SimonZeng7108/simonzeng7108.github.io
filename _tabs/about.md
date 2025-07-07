@@ -113,12 +113,34 @@ Prior to this, I was a PhD research student at [*Machine Learning and Computer V
 ---
 ## Projects
 ---
+![Desktop View](/images/portfolio/csf.gif){: width="150" height="150" .w-10 .left}
+**BVI-HVS: A Human Visual Perception-Grounded Video Quality Dataset**<br/>
+to be Preprint <br/>
+Chengxi Zeng, Robbie Hamilton, Ge Gao, Yuxuan Jiang, Fan Zhang, Rahul Vanam, Sriram Sethuraman, David Bull <br/>
+University of Bristol/Amazon <br/>
+The development of robust Video Quality Assessment (VQA) models that correlate with human perception is critically dependent on the datasets used for their training and validation. Current datasets, however, often lack explicit grounding in the fundamental principles of the Human Visual System (HVS), particularly the Contrast Sensitivity Function (CSF), which dictates perceptual sensitivity to spatio-temporal frequencies. To bridge this gap, we introduce BVI-HVS, a large-scale VQA dataset meticulously designed to challenge models with perceptually-motivated distortions. Our contribution is a comprehensive workflow that encompasses: (1) rigorous curation of 511 diverse, high-resolution source videos using semantic deduplication and entropy-based sampling to ensure content diversity; (2) a novel artifact generation pipeline that modulates HEVC compression artifacts based on a state-of-the-art CSF model operating in a perceptually-uniform color space; and (3) a large-scale subjective study collecting patch-level quality labels for both fixed-location and object-tracked patches, enabling finer-grained analysis of local quality perception. By benchmarking seven prominent VQA models, we demonstrate that BVI-HVS poses a significant challenge, with deep learning-based metrics outperforming traditional methods but still leaving a substantial performance gap. The dataset, models, and code will be publicly released to spur the development of next-generation, perceptually-aligned VQA models.
+
+
+---
 ![Desktop View](/images/portfolio/C2D_loop.gif){: width="150" height="150" .w-10 .left}
 [**C2D-ISR: Optimizing Attention-based Image Super-resolution from Continuous to Discrete Scales - 2025**](https://arxiv.org/abs/2503.13740) <br/>
 Preprint, Under Review <br/>
 Yuxuan Jiang, Chengxi Zeng, Siyue Teng, Fan Zhang, Xiaoqing Zhu, Joel Sole, David Bull <br/>
 [[*arXiv*](https://arxiv.org/abs/2503.13740)]<br/>
 In recent years, attention mechanisms have been exploited in single image super-resolution (SISR), achieving impressive reconstruction results. However, these advancements are still limited by the reliance on simple training strategies and network architectures designed for discrete up-sampling scales, which hinder the model's ability to effectively capture information across multiple scales. To address these limitations, we propose a novel framework, C2D-ISR, for optimizing attention-based image super-resolution models from both performance and complexity perspectives. Our approach is based on a two-stage training methodology and a hierarchical encoding mechanism. The new training methodology involves continuous-scale training for discrete scale models, enabling the learning of inter-scale correlations and multi-scale feature representation. In addition, we generalize the hierarchical encoding mechanism with existing attention-based network structures, which can achieve improved spatial feature fusion, cross-scale information aggregation, and more importantly, much faster inference. We have evaluated the C2D-ISR framework based on three efficient attention-based backbones, SwinIR-L, SRFormer-L and MambaIRv2-L, and demonstrated significant improvements over the other existing optimization framework, HiT, in terms of super-resolution performance (up to 0.2dB) and computational complexity reduction (up to 11%). 
+
+
+---
+
+
+![Desktop View](/images/portfolio/track_biker.gif){: width="200" height="200" .w-10 .left}
+**Multi-Teacher Knowledge Distillation for Efficient Object Segmentation - 2025** <br/>
+IEEE International Conference on Image Processing (**ICIP 2025**), **Accepted** <br/>
+
+Chengxi Simon Zeng, Kurt Cutajar, Hanting Xie, Massimo Camplani, Richard Tomsett, Niall Twomey, Jas Kandola, Gavin K.C. Cheung <br/>
+Studio AI Lab, Amazon<br/>
+Segment Anything Model 2 (SAM2) has demonstrated state-of-the-art performance in image/video object segmentation across many domains, but its large encoder makes it challenging for resource-constrained devices or real-time applications. One solution to this problem is to carry out knowledge distillation from the bulky encoder to a lightweight encoder, but this can result in degraded performance. In this work, we investigate multi-teacher distillation to mitigate performance degradation for distilled segmentation models. Using several foundation teacher models, our multi-teacher distilled models achieve 3.2 times speedup during end-to-end inference compared to SAM2 while achieving the best results of 74.4 and 71.1 (72.1 and 69.6 for single-teacher distillation) mIoU on the COCO and LVIS image segmentation datasets, as well as showing competitive results on video segmentation. Our results show that multi-teacher distillation offers a powerful solution for efficient image/video segmentation, while also maintaining compelling performance. 
+
 
 ---
 

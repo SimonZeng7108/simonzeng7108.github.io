@@ -38,7 +38,10 @@ layout: default
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
 
     <div class="access">
+      {% comment %}Show Recently Updated only on normal pages{% endcomment %}
+      {% unless page.layout == 'home' or page.collection == 'tabs' %}
       {% include update-list.html %}
+      {% endunless %}
       {% include trending-tags.html %}
     </div>
 

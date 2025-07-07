@@ -36,3 +36,8 @@
   type: rss
   icon: 'fas fa-rss'
   noblank: true
+
+-
+  type: google-scholar
+  icon: 'ai ai-google-scholar'
+  url: 'https://scholar.google.com/citations?user=uuQcjAcAAAAJ&hl=en'
