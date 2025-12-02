@@ -49,7 +49,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <span class="tag is-warning is-light">Coming soon: Code & weights will be released upon SAM3's public release</span>
+          <span class="tag is-success is-light">✓ Stage 1 image encoder weights released!</span>
           <h1 class="title is-1 publication-title">EfficientSAM3: Progressive Hierarchical Knowledge Distillation from SAM1, SAM2 &amp; SAM3</h1>
           <p class="is-size-5">Chengxi Simon Zeng, Yuxuan Jiang, Aaron Zhang · Visual Information Lab, University of Bristol</p>
           <div class="buttons is-centered mt-5">
@@ -57,17 +57,21 @@
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>GitHub</span>
             </a>
-            <a class="button is-link is-rounded" href="https://huggingface.co/Simon7108528/EfficientSAM3" disabled title="Coming soon once SAM3 is public">
+            <a class="button is-link is-rounded" href="https://huggingface.co/Simon7108528/EfficientSAM3">
             <span class="icon huggingface-icon">🤗</span>
-              <span>Weights (Coming soon)</span>
+              <span>Weights</span>
             </a>
             <a class="button is-info is-rounded" href="#model-zoo">
               <span class="icon"><i class="fas fa-database"></i></span>
               <span>Model Zoo</span>
             </a>
-            <a class="button is-danger is-rounded" href="#">
+            <a class="button is-danger is-rounded" href="https://arxiv.org/abs/2511.15833">
               <span class="icon"><i class="ai ai-arxiv"></i></span>
               <span>arXiv</span>
+            </a>
+            <a class="button is-primary is-rounded" href="https://discord.gg/Vd2gXNE8">
+              <span class="icon"><i class="fab fa-discord"></i></span>
+              <span>Discord</span>
             </a>
           </div>
         </div>
@@ -89,7 +93,7 @@
     <div class="columns is-centered">
       <div class="column is-three-quarters">
         <figure class="image">
-          <img src="./static/images/efficientsam3_full.svg" alt="EfficientSAM3 architecture diagram">
+          <img src="./static/images/efficientsam3_full.svg?v=2" alt="EfficientSAM3 architecture diagram">
         </figure>
       </div>
     </div>
@@ -102,13 +106,15 @@
       <div class="column">
         <h3 class="title is-4">Updates</h3>
         <ul>
-          <li><strong>2025-10-18:</strong> Project announced. Code and weights will be published once SAM3 code is publicly available.</li>
+          <li><strong>2025-12-02:</strong> Stage 1 image encoder weights released for all 9 variants (RepViT, TinyViT, EfficientViT) - distilled on 1% of SA-1B dataset. Available via Google Drive and Hugging Face.</li>
+          <li><strong>2025-10-18:</strong> Project announced.</li>
         </ul>
       </div>
       <div class="column">
         <h3 class="title is-4">Highlights</h3>
         <ul>
-          <li>Promptable concept segmentation distilled into RepViT, TinyViT, and EfficientViT families.</li>
+          <li>Image encoders distilled into RepViT, TinyViT, and EfficientViT families.</li>
+          <li>Text encoders distilled into MobileCLIP variants (up to 87.96% smaller than SAM3's 354M text encoder).</li>
           <li>Perceiver-based memory compression aligned with SAM2 temporal tracking.</li>
           <li>ONNX/CoreML support for real-time mobile, embedded, and desktop deployment.</li>
         </ul>
@@ -118,7 +124,7 @@
         <ul>
           <li><a href="https://github.com/SimonZeng7108/efficientsam3#readme">Project README</a> (installation, inference, training)</li>
           <li><a href="https://github.com/SimonZeng7108/efficientsam3/blob/main/README_dataset.md">Dataset setup guide</a></li>
-          <li><a href="#">arXiv</a></li>
+          <li><a href="https://arxiv.org/abs/2511.15833">arXiv</a></li>
         </ul>
       </div>
     </div>
@@ -173,13 +179,24 @@
       <div class="column">
         <h3 class="title is-5">Installation</h3>
         <div class="content">
-          <p><em>Coming soon:</em> setup instructions will be provided once SAM3 is publicly available.</p>
+          <pre><code>pip install -e ".[stage1]"</code></pre>
+          <p>See the <a href="https://github.com/SimonZeng7108/efficientsam3#installation">installation guide</a> for full setup instructions.</p>
         </div>
       </div>
       <div class="column">
-        <h3 class="title is-5">Inference Example</h3>
+        <h3 class="title is-5">Quick Start</h3>
         <div class="content">
-          <p><em>Coming soon:</em> examples will be provided once code and weights are released.</p>
+          <pre><code>model = build_efficientsam3_image_model(
+    checkpoint_path="efficient_sam3_tinyvit_s.pt",
+    backbone_type="tinyvit", model_name="5m"
+)
+processor = Sam3Processor(model)
+inference_state = processor.set_image(image)
+masks, scores, _ = model.predict_inst(
+    inference_state, point_coords=points, 
+    point_labels=labels
+)</code></pre>
+          <p>See <a href="https://github.com/SimonZeng7108/efficientsam3/blob/main/sam3/efficientsam3_examples/efficientsam3_for_sam1_task_example.py">example script</a> for details.</p>
         </div>
       </div>
     </div>
@@ -189,7 +206,9 @@
 <section class="section is-light" id="model-zoo">
   <div class="container is-max-desktop">
     <h2 class="title is-3">EfficientSAM3 Model Zoo &amp; Weight Release</h2>
-    <p>Code and weights are not yet released. They will be published once SAM3 code is publicly available.</p>
+    <p>Stage 1 image encoder weights (distilled from SAM3 image encoder) are now available via Google Drive and Hugging Face. Stage 2 and 3 weights coming soon.</p>
+    
+    <h3 class="title is-4 mt-5">Image Encoder Models</h3>
     <div class="table-container">
       <table class="table is-striped is-fullwidth">
         <thead>
@@ -207,7 +226,7 @@
             <td><strong>ES-RV-S</strong></td>
             <td>RepViT-M0.9</td>
             <td>5.1M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1lVvPPoIVDhCFGte-1E_dr4X5EKbE5xKq/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_repvit_s.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -215,7 +234,7 @@
             <td><strong>ES-RV-M</strong></td>
             <td>RepViT-M1.1</td>
             <td>6.8M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1JW3KiTnYF2r8nIijf8UXrKXJwf5D5s-5/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_repvit_m.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -223,7 +242,7 @@
             <td><strong>ES-RV-L</strong></td>
             <td>RepViT-M2.3</td>
             <td>8.2M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1ocAkz6DgkaKCKpLdalq2Ya8X6VIMrLLI/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_repvit_l.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -231,7 +250,7 @@
             <td><strong>ES-TV-S</strong></td>
             <td>TinyViT-5M</td>
             <td>5.4M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1CDfJTd2fTKJTV5nsfYLAV_CGMfQ-AWXS/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_tinyvit_s.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -239,7 +258,7 @@
             <td><strong>ES-TV-M</strong></td>
             <td>TinyViT-11M</td>
             <td>11M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1TX70zw7SduQRZP6hce6MIxEOsdoooZFB/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_tinyvit_m.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -247,7 +266,7 @@
             <td><strong>ES-TV-L</strong></td>
             <td>TinyViT-21M</td>
             <td>21M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/19hyKjjZ4_8ldmxIAm6D8e8z89xX-M3hZ/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_tinyvit_l.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -255,7 +274,7 @@
             <td><strong>ES-EV-S</strong></td>
             <td>EfficientViT-B0</td>
             <td>0.7M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/1EnA581iSExZRRWlI6oY-wXTgX4gESijG/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_efficientvit_s.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -263,7 +282,7 @@
             <td><strong>ES-EV-M</strong></td>
             <td>EfficientViT-B1</td>
             <td>4.8M</td>
-            <td>Planned</td>
+            <td><a href="https://drive.google.com/file/d/14CRA3LhquUkf8prrKfI1INyHtCw6buvm/view?usp=sharing">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_efficientvit_m.pt">HF</a></td>
             <td>Planned</td>
             <td>Planned</td>
           </tr>
@@ -271,6 +290,49 @@
             <td><strong>ES-EV-L</strong></td>
             <td>EfficientViT-B2</td>
             <td>15M</td>
+            <td><a href="https://drive.google.com/file/d/1Zg0Er0LwYYNCFJezSUSlQ8L645cR1OhN/view?usp=drive_link">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/stage1_all_converted/efficient_sam3_efficientvit_l.pt">HF</a></td>
+            <td>Planned</td>
+            <td>Planned</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="notification is-info is-light mt-3"><strong>Note (2025/12/02):</strong> The current Stage 1 image encoder weights are distilled on 1% of the SA-1B dataset.</p>
+
+    <h3 class="title is-4 mt-5">Text Encoder Models</h3>
+    <div class="table-container">
+      <table class="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Backbone</th>
+            <th>Parameters</th>
+            <th>Stage 1</th>
+            <th>Stage 2</th>
+            <th>Stage 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ES-MC-S</strong></td>
+            <td>MobileCLIP-S0</td>
+            <td>42.57M</td>
+            <td>Planned</td>
+            <td>Planned</td>
+            <td>Planned</td>
+          </tr>
+          <tr>
+            <td><strong>ES-MC-M</strong></td>
+            <td>MobileCLIP-S1</td>
+            <td>63.56M</td>
+            <td>Planned</td>
+            <td>Planned</td>
+            <td>Planned</td>
+          </tr>
+          <tr>
+            <td><strong>ES-MC-L</strong></td>
+            <td>MobileCLIP2-L</td>
+            <td>123.6M</td>
             <td>Planned</td>
             <td>Planned</td>
             <td>Planned</td>
@@ -302,7 +364,9 @@
       <div class="column">
         <h3 class="title is-4">Roadmap</h3>
         <ul>
-          <li><span class="tag is-info is-light">Planned</span> Release Stage 1 encoder weights (pending SAM3 public release)</li>
+          <li><span class="tag is-success is-light">✓ Completed</span> Release Stage 1 image encoder weights (distilled from SAM3 image encoder)</li>
+          <li><span class="tag is-info is-light">In Progress</span> Release Stage 1 text encoder weights (distilled from SAM3 text encoder to MobileCLIP variants)</li>
+          <li><span class="tag is-info is-light">Planned</span> Release Stage 1+ fine-tuned encoder weights (prompt-in-the-loop supervised fine-tuning)</li>
           <li><span class="tag is-info is-light">Planned</span> Release Stage 2 memory bank aligned models</li>
           <li><span class="tag is-info is-light">Planned</span> Release Stage 3 fine-tuned PCS models</li>
           <li><span class="tag is-info is-light">Planned</span> ONNX/CoreML export</li>
@@ -323,15 +387,35 @@
   </div>
 </section>
 
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Users</h2>
+    <p class="has-text-centered">Organizations and projects using EfficientSAM3:</p>
+    
+    <div class="columns is-mobile is-multiline is-centered mt-5">
+      <div class="column is-one-fifth-desktop is-one-third-tablet has-text-centered">
+        <img src="./static/images/esa.png" alt="European Space Agency" style="height: 80px; margin-bottom: 10px;">
+        <p><a href="https://www.esa.int/">European Space Agency</a></p>
+      </div>
+    </div>
+    
+    <div class="notification is-info is-light mt-5">
+      <p><strong>Note:</strong> If you're using EfficientSAM3 in your work, please acknowledge us in your publications or projects. We're happy to promote your work here! Contact us to be featured in this section.</p>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="citation">
   <div class="container is-max-desktop content">
     <h2 class="title">Citation</h2>
-    <pre><code>@misc{efficientsam3,
-  title={EfficientSAM3: Progressive Hierachical Knowledge Distillation (PhD) from SAM1, 2 and 3},
-  author={Zeng, Chengxi Simon and Jiang, Yuxuan and Zhang, Aaron},
-  institution={University of Bristol},
+    <pre><code>@misc{zeng2025efficientsam3progressivehierarchicaldistillation,
+  title={EfficientSAM3: Progressive Hierarchical Distillation for Video Concept Segmentation from SAM1, 2, and 3}, 
+  author={Chengxi Zeng and Yuxuan Jiang and Gao Ge and Shuai Wang and Fan Aaron Zhang},
   year={2025},
-  howpublished={https://github.com/SimonZeng7108/efficientsam3}
+  eprint={2511.15833},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2511.15833}, 
 }</code></pre>
   </div>
 </section>
