@@ -49,7 +49,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <span class="tag is-success is-light">✓ Stage 1 + fine-tuned (ft) encoder weights released!</span>
+          <span class="tag is-success is-light">✓ SAM3-LiteText released! (88% fewer text params)</span>
           <h1 class="title is-1 publication-title">EfficientSAM3: Progressive Hierarchical Knowledge Distillation from SAM1, SAM2 &amp; SAM3</h1>
           <p class="is-size-5">Chengxi Simon Zeng, Yuxuan Jiang, Gao Ge, Shuai Wang, Fan Aaron Zhang · Visual Information Lab, University of Bristol; MultiX lab, University of Amsterdam</p>
           <div class="buttons is-centered mt-5">
@@ -67,7 +67,11 @@
             </a>
             <a class="button is-danger is-rounded" href="https://arxiv.org/abs/2511.15833">
               <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
+              <span>arXiv (Main)</span>
+            </a>
+            <a class="button is-danger is-rounded" href="https://arxiv.org/abs/2602.12173">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv (LiteText)</span>
             </a>
             <a class="button is-primary is-rounded" href="https://discord.gg/FMyaQca7xT">
               <span class="icon"><i class="fab fa-discord"></i></span>
@@ -426,6 +430,49 @@ print(len(scores), scores)</code></pre>
     </div>
     <p class="notification is-info is-light mt-3"><strong>Note (2025/12/08):</strong> The current Stage 1 text encoder weights are distilled on 1% of the Recap-DataComp-1B dataset.</p>
     <p class="notification is-info is-light mt-3"><strong>Note (2026/01/11):</strong> Fine-tuned (<strong>ft</strong>) text encoder models are fine-tuned on SA-Co Gold+Silver text annotations. Standalone fine-tuned text encoder weights: <a href="https://drive.google.com/file/d/1JtbqC2d_F0i9pN-skGuUfSnJx50aAKsd/view?usp=sharing">MobileCLIP-S0</a>, <a href="https://drive.google.com/file/d/14x9iwLnVq282fGPy8JypnCWsB9da_1Mh/view?usp=sharing">MobileCLIP-S1</a>, and <a href="https://drive.google.com/file/d/1xdyDkGaBwUYALZ1u7U7sGS7yq-gIEnDz/view?usp=sharing">MobileCLIP2-L</a>.</p>
+
+    <h3 class="title is-4 mt-5">SAM3-LiteText Models</h3>
+    <p class="mb-3">
+      SAM3-LiteText replaces the SAM3 text encoder with a lightweight distilled text encoder, reducing text encoder parameters by up to <strong>88%</strong> with comparable performance. See the <a href="https://arxiv.org/abs/2602.12173">SAM3-LiteText paper</a> for details.
+    </p>
+    <div class="table-container">
+      <table class="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Text Encoder</th>
+            <th>Ctx</th>
+            <th>Text Params</th>
+            <th>Weights</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SAM3-LiteText-S0-16</strong></td>
+            <td>MobileCLIP-S0</td>
+            <td>16</td>
+            <td>42.54M</td>
+            <td><a href="https://drive.google.com/file/d/1Eo81WYzfozFSvgvwlScGorUAIfMVPAFm/view?usp=sharing">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/sam3_litetext/efficient_sam3_image_encoder_mobileclip_s0_ctx16.pt">HF</a></td>
+          </tr>
+          <tr>
+            <td><strong>SAM3-LiteText-S1-16</strong></td>
+            <td>MobileCLIP-S1</td>
+            <td>16</td>
+            <td>63.53M</td>
+            <td><a href="https://drive.google.com/file/d/1zL6x91PzvupHtZdA68jYip6yAUel8MMV/view?usp=sharing">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/sam3_litetext/efficient_sam3_image_encoder_mobileclip_s1_ctx16.pt">HF</a></td>
+          </tr>
+          <tr>
+            <td><strong>SAM3-LiteText-L-16</strong></td>
+            <td>MobileCLIP2-L</td>
+            <td>16</td>
+            <td>123.80M</td>
+            <td><a href="https://drive.google.com/file/d/1Mc4pk0FNCWwPTGoj1CCdAhkkNz02CUyY/view?usp=sharing">GDrive</a> / <a href="https://huggingface.co/Simon7108528/EfficientSAM3/resolve/main/sam3_litetext/efficient_sam3_image_encoder_mobileclip2_l_ctx16.pt">HF</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="notification is-info is-light mt-3"><strong>Note:</strong> All SAM3-LiteText models use the <strong>SAM3 ViT-H image encoder</strong> (353.72M vision params). The text encoder parameters shown represent the distilled student replacing the original 353.72M text encoder.</p>
+    <p class="notification is-info is-light mt-3"><strong>Note (2026/02/18):</strong> <strong>SAM3-LiteText</strong> released! SAM3-LiteText reduces text encoder parameters by up to 88% with similar performance to the original text encoder. <a href="https://arxiv.org/abs/2602.12173">Paper</a> available on arXiv.</p>
   </div>
 </section>
 
@@ -453,6 +500,7 @@ print(len(scores), scores)</code></pre>
           <li><span class="tag is-success is-light">✓ Completed</span> Release Stage 1 image encoder weights (distilled from SAM3 image encoder)</li>
           <li><span class="tag is-success is-light">✓ Completed</span> Release Stage 1 text encoder weights (distilled from SAM3 text encoder to MobileCLIP-S1 combined with all 9 image encoder variants)</li>
           <li><span class="tag is-success is-light">✓ Completed</span> Release Stage 1+ fine-tuned (<strong>ft</strong>) encoder weights (geometry-prompt fine-tuning; SA-Co Gold+Silver text fine-tuning)</li>
+          <li><span class="tag is-success is-light">✓ Completed</span> Release SAM3-LiteText weights (distilled lightweight text encoder competitive with SAM3 text encoder)</li>
           <li><span class="tag is-info is-light">Planned</span> Release Stage 2 memory bank aligned models</li>
           <li><span class="tag is-info is-light">Planned</span> Release Stage 3 fine-tuned PCS models</li>
           <li><span class="tag is-info is-light">Planned</span> ONNX/CoreML export</li>
@@ -481,7 +529,7 @@ print(len(scores), scores)</code></pre>
     <div class="columns is-mobile is-multiline is-centered mt-5">
       <div class="column is-one-fifth-desktop is-one-third-tablet has-text-centered">
         <img src="./static/images/esa.png" alt="European Space Agency" style="height: 80px; margin-bottom: 10px;">
-        <p><a href="https://www.esa.int/">European Space Agency</a></p>
+        <p><a href="https://www.esa.int/Applications/Observing_the_Earth/Phsat-2/Introducing_Phsat-2">European Space Agency</a></p>
       </div>
     </div>
     
@@ -495,13 +543,23 @@ print(len(scores), scores)</code></pre>
   <div class="container is-max-desktop content">
     <h2 class="title">Citation</h2>
     <pre><code>@misc{zeng2025efficientsam3progressivehierarchicaldistillation,
-  title={EfficientSAM3: Progressive Hierarchical Distillation for Video Concept Segmentation from SAM1, 2, and 3}, 
-  author={Chengxi Zeng and Yuxuan Jiang and Gao Ge and Shuai Wang and Fan Aaron Zhang},
-  year={2025},
-  eprint={2511.15833},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2511.15833}, 
+      title={EfficientSAM3: Progressive Hierarchical Distillation for Video Concept Segmentation from SAM1, 2, and 3}, 
+      author={Chengxi Zeng and Yuxuan Jiang and Aaron Zhang},
+      year={2025},
+      eprint={2511.15833},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.15833}, 
+}
+
+@misc{zeng2026sam3litetextanatomicalstudysam3,
+      title={SAM3-LiteText: An Anatomical Study of the SAM3 Text Encoder for Efficient Vision-Language Segmentation}, 
+      author={Chengxi Zeng and Yuxuan Jiang and Ge Gao and Shuai Wang and Duolikun Danier and Bin Zhu and Stevan Rudinac and David Bull and Fan Zhang},
+      year={2026},
+      eprint={2602.12173},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2602.12173}, 
 }</code></pre>
   </div>
 </section>
