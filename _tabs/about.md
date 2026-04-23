@@ -6,7 +6,11 @@ order: 4
 
 ![Desktop View](/images/portfolio/simon_conference.jpeg){: width="400" height="400" .w-50 .float-right}
 
-I am a Postdoctoral Research Associate at the [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/) in Bristol, supervised by [*Dr Aaron Zhang*](https://fan-aaron-zhang.github.io/) and [*Prof. David Bull*](https://www.bristol.ac.uk/people/person/David-Bull-f53987d8-4d62-431b-8228-2d39f944fbfe/). My current project, funded by Prime Video, Amazon, focuses on deep video quality assessment.
+I am a senior AI researcher at a major tech company.
+
+I am also an honorary Research Associate at the University of Bristol.
+
+I was a Postdoctoral Research Associate at the [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/) in Bristol, supervised by [*Dr Aaron Zhang*](https://fan-aaron-zhang.github.io/) and [*Prof. David Bull*](https://www.bristol.ac.uk/people/person/David-Bull-f53987d8-4d62-431b-8228-2d39f944fbfe/). My current project, funded by Prime Video, Amazon, focuses on deep video quality assessment.
 
 Prior to this, I was a PhD research student at [*Machine Learning and Computer Vision Research Group (MaVi)*](https://uob-mavi.github.io/people/) and [*Visual Information Lab (VIL)*](https://vilab.blogs.bristol.ac.uk/), University of Bristol, where I was supervised by [*Dr Alberto Gambaruto*](https://research-information.bris.ac.uk/en/persons/alberto-m-gambaruto) and [*Prof. Tilo Burghardt*](http://people.cs.bris.ac.uk/~burghard/). We worked on the swallowing project [CTAR-SwiFt](https://www.dev.fundingawards.nihr.ac.uk/award/PB-PG-1217-20005) funded by NIHR.
 
@@ -112,13 +116,24 @@ During my PhD, I spent a great 6 months at Amazon in London as an Applied Scient
 ---
 ## Projects
 ---
+![Desktop View](/images/portfolio/sam3_litetext_demo.png){: width="150" height="150" .w-10 .left}
+[**SAM3-LiteText: An Anatomical Study of the SAM3 Text Encoder for Efficient Vision-Language Segmentation - 2026**](https://arxiv.org/abs/2602.12173) <br/>
+ACM International Conference on Multimedia Retrieval (**ICMR 2026**), **Accepted** | Live on 🤗 HuggingFace Transformers **main** branch <br/>
+Chengxi Zeng, Yuxuan Jiang, Ge Gao, Shuai Wang, Duolikun Danier, Bin Zhu, Stevan Rudinac, David Bull, Fan Zhang <br/>
+University of Bristol / Amazon <br/>
+[[*Docs*](https://huggingface.co/docs/transformers/main/en/model_doc/sam3_lite_text)]
+[[*Model*](https://huggingface.co/yonigozlan/sam3-litetext-s0)]
+[[*Demo*](https://huggingface.co/spaces/nielsr/sam-3-lite-text-vs-sam-3)]
+[[*arXiv*](https://arxiv.org/abs/2602.12173)]<br/>
+SAM3-LiteText reduces the SAM3 text encoder by up to **88%** while preserving segmentation performance, making the model much smaller without sacrificing accuracy. The work is now live on HuggingFace Transformers **main** branch, accepted by **ICMR 2026**, and represents a strong efficiency-first extension to Ultralytics’ existing SAM3 integration.
+
+---
 ![Desktop View](/images/portfolio/csf.gif){: width="150" height="150" .w-10 .left}
 **BVI-HVS: A Human Visual Perception-Grounded Video Quality Dataset**<br/>
 to be Preprint <br/>
 Chengxi Zeng, Robbie Hamilton, Ge Gao, Yuxuan Jiang, Fan Zhang, Rahul Vanam, Sriram Sethuraman, David Bull <br/>
 University of Bristol/Amazon <br/>
-The development of robust Video Quality Assessment (VQA) models that correlate with human perception is critically dependent on the datasets used for their training and validation. Current datasets, however, often lack explicit grounding in the fundamental principles of the Human Visual System (HVS), particularly the Contrast Sensitivity Function (CSF), which dictates perceptual sensitivity to spatio-temporal frequencies. To bridge this gap, we introduce BVI-HVS, a large-scale VQA dataset meticulously designed to challenge models with perceptually-motivated distortions. Our contribution is a comprehensive workflow that encompasses: (1) rigorous curation of 511 diverse, high-resolution source videos using semantic deduplication and entropy-based sampling to ensure content diversity; (2) a novel artifact generation pipeline that modulates HEVC compression artifacts based on a state-of-the-art CSF model operating in a perceptually-uniform color space; and (3) a large-scale subjective study collecting patch-level quality labels for both fixed-location and object-tracked patches, enabling finer-grained analysis of local quality perception. By benchmarking seven prominent VQA models, we demonstrate that BVI-HVS poses a significant challenge, with deep learning-based metrics outperforming traditional methods but still leaving a substantial performance gap. The dataset, models, and code will be publicly released to spur the development of next-generation, perceptually-aligned VQA models.
-
+We introduce BVI-HVS, a large-scale VQA dataset grounded in the Human Visual System (HVS) and Contrast Sensitivity Function (CSF). It features 511 curated high-resolution source videos with perceptually-motivated HEVC distortions and patch-level quality labels from a large-scale subjective study. Benchmarking seven VQA models reveals a substantial performance gap, motivating next-generation perceptually-aligned metrics.
 
 ---
 ![Desktop View](/images/portfolio/C2D_loop.gif){: width="150" height="150" .w-10 .left}
